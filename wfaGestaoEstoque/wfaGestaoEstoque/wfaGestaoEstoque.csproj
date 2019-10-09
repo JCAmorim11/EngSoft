@@ -61,15 +61,51 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmIncio.cs">
+    <Compile Include="Controller\Login.cs" />
+    <Compile Include="Controller\Produto.cs" />
+    <Compile Include="Controller\User.cs" />
+    <Compile Include="View\frmCadProd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmIncio.Designer.cs">
+    <Compile Include="View\frmCadProd.Designer.cs">
+      <DependentUpon>frmCadProd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmCadUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmCadUser.Designer.cs">
+      <DependentUpon>frmCadUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmFornecedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmFornecedores.Designer.cs">
+      <DependentUpon>frmFornecedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmIncio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmIncio.Designer.cs">
       <DependentUpon>frmIncio.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmIncio.resx">
+    <Compile Include="View\frmInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmInventario.Designer.cs">
+      <DependentUpon>frmInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\frmCadProd.resx">
+      <DependentUpon>frmCadProd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmIncio.resx">
       <DependentUpon>frmIncio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -95,9 +131,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controller\" />
     <Folder Include="Model\" />
-    <Folder Include="View\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
