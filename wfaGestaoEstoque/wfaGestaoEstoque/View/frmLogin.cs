@@ -16,5 +16,10 @@ namespace wfaGestaoEstoque.View
         {
             InitializeComponent();
         }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

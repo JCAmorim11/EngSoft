@@ -77,6 +77,12 @@
     <Compile Include="View\frmCadUser.Designer.cs">
       <DependentUpon>frmCadUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmCompras.Designer.cs">
+      <DependentUpon>frmCompras.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmFornecedores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\frmInventario.resx">
+      <DependentUpon>frmInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace wfaGestaoEstoque
+namespace wfaGestaoEstoque.View
 {
-    public partial class frmIncio : Form
+    public partial class frmCompras : Form
     {
-        public frmIncio()
+        public frmCompras()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
