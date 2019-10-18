@@ -64,9 +64,15 @@
     <Compile Include="Controller\Compra.cs" />
     <Compile Include="Controller\Login.cs" />
     <Compile Include="Controller\Produto.cs" />
-    <Compile Include="Controller\User.cs" />
+    <Compile Include="Controller\Consumidor.cs" />
     <Compile Include="Controller\Venda.cs" />
     <Compile Include="Model\Conexao.cs" />
+    <Compile Include="View\frmCadConsum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmCadConsum.Designer.cs">
+      <DependentUpon>frmCadConsum.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmCadForn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     <Compile Include="View\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\frmCadConsum.resx">
+      <DependentUpon>frmCadConsum.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmCadForn.resx">
       <DependentUpon>frmCadForn.cs</DependentUpon>
     </EmbeddedResource>

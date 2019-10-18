@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace wfaGestaoEstoque.Controller
 {
-    class User
+    class Consumidor
     {
 
     }
