@@ -61,21 +61,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\Compra.cs" />
     <Compile Include="Controller\Login.cs" />
     <Compile Include="Controller\Produto.cs" />
     <Compile Include="Controller\User.cs" />
+    <Compile Include="Controller\Venda.cs" />
     <Compile Include="Model\Conexao.cs" />
+    <Compile Include="View\frmCadForn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmCadForn.Designer.cs">
+      <DependentUpon>frmCadForn.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmCadProd.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\frmCadProd.Designer.cs">
       <DependentUpon>frmCadProd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\frmCadUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\frmCadUser.Designer.cs">
-      <DependentUpon>frmCadUser.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmCompras.cs">
       <SubType>Form</SubType>
@@ -109,8 +111,17 @@
     <Compile Include="View\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\frmCadForn.resx">
+      <DependentUpon>frmCadForn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmCadProd.resx">
       <DependentUpon>frmCadProd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmCompras.resx">
+      <DependentUpon>frmCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmFornecedores.resx">
+      <DependentUpon>frmFornecedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmIncio.resx">
       <DependentUpon>frmIncio.cs</DependentUpon>

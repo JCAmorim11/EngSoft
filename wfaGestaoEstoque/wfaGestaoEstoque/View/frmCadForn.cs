@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace wfaGestaoEstoque.View
 {
-    public partial class frmCadUser : Form
+    public partial class frmCadForn : Form
     {
-        public frmCadUser()
+        public frmCadForn()
         {
             InitializeComponent();
         }

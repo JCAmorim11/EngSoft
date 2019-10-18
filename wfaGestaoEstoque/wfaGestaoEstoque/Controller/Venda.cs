@@ -6,14 +6,7 @@ using System.Threading.Tasks;
 
 namespace wfaGestaoEstoque.Controller
 {
-    /// <summary>
-    /// Classe de controle de Login
-    /// </summary>
-
-    #region Classe Login
-    class Login
+    class Venda
     {
-
     }
-    #endregion
 }

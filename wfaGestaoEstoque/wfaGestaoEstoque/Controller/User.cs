@@ -8,5 +8,6 @@ namespace wfaGestaoEstoque.Controller
 {
     class User
     {
+
     }
 }
