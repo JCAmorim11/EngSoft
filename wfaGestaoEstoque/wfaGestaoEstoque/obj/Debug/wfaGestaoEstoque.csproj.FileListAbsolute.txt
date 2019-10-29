@@ -1,0 +1,17 @@
+G:\ENGENHARIA DE SOFTWARE III\EngSoft-master (1)\EngSoft-master\wfaGestaoEstoque\wfaGestaoEstoque\bin\Debug\wfaGestaoEstoque.exe.config
+G:\ENGENHARIA DE SOFTWARE III\EngSoft-master (1)\EngSoft-master\wfaGestaoEstoque\wfaGestaoEstoque\bin\Debug\wfaGestaoEstoque.exe
+G:\ENGENHARIA DE SOFTWARE III\EngSoft-master (1)\EngSoft-master\wfaGestaoEstoque\wfaGestaoEstoque\bin\Debug\wfaGestaoEstoque.pdb
+G:\ENGENHARIA DE SOFTWARE III\EngSoft-master (1)\EngSoft-master\wfaGestaoEstoque\wfaGestaoEstoque\obj\Debug\wfaGestaoEstoque.csprojAssemblyReference.cache
+G:\ENGENHARIA DE SOFTWARE III\EngSoft-master (1)\EngSoft-master\wfaGestaoEstoque\wfaGestaoEstoque\obj\Debug\wfaGestaoEstoque.View.frmCadConsum.resources
+G:\ENGENHARIA DE SOFTWARE III\EngSoft-master (1)\EngSoft-master\wfaGestaoEstoque\wfaGestaoEstoque\obj\Debug\wfaGestaoEstoque.View.frmCadForn.resources
+G:\ENGENHARIA DE SOFTWARE III\EngSoft-master (1)\EngSoft-master\wfaGestaoEstoque\wfaGestaoEstoque\obj\Debug\wfaGestaoEstoque.View.frmCadProd.resources
+G:\ENGENHARIA DE SOFTWARE III\EngSoft-master (1)\EngSoft-master\wfaGestaoEstoque\wfaGestaoEstoque\obj\Debug\wfaGestaoEstoque.View.frmCompras.resources
+G:\ENGENHARIA DE SOFTWARE III\EngSoft-master (1)\EngSoft-master\wfaGestaoEstoque\wfaGestaoEstoque\obj\Debug\wfaGestaoEstoque.View.frmFornecedores.resources
+G:\ENGENHARIA DE SOFTWARE III\EngSoft-master (1)\EngSoft-master\wfaGestaoEstoque\wfaGestaoEstoque\obj\Debug\wfaGestaoEstoque.frmIncio.resources
+G:\ENGENHARIA DE SOFTWARE III\EngSoft-master (1)\EngSoft-master\wfaGestaoEstoque\wfaGestaoEstoque\obj\Debug\wfaGestaoEstoque.Properties.Resources.resources
+G:\ENGENHARIA DE SOFTWARE III\EngSoft-master (1)\EngSoft-master\wfaGestaoEstoque\wfaGestaoEstoque\obj\Debug\wfaGestaoEstoque.View.frmInventario.resources
+G:\ENGENHARIA DE SOFTWARE III\EngSoft-master (1)\EngSoft-master\wfaGestaoEstoque\wfaGestaoEstoque\obj\Debug\wfaGestaoEstoque.View.frmLogin.resources
+G:\ENGENHARIA DE SOFTWARE III\EngSoft-master (1)\EngSoft-master\wfaGestaoEstoque\wfaGestaoEstoque\obj\Debug\wfaGestaoEstoque.csproj.GenerateResource.cache
+G:\ENGENHARIA DE SOFTWARE III\EngSoft-master (1)\EngSoft-master\wfaGestaoEstoque\wfaGestaoEstoque\obj\Debug\wfaGestaoEstoque.csproj.CoreCompileInputs.cache
+G:\ENGENHARIA DE SOFTWARE III\EngSoft-master (1)\EngSoft-master\wfaGestaoEstoque\wfaGestaoEstoque\obj\Debug\wfaGestaoEstoque.exe
+G:\ENGENHARIA DE SOFTWARE III\EngSoft-master (1)\EngSoft-master\wfaGestaoEstoque\wfaGestaoEstoque\obj\Debug\wfaGestaoEstoque.pdb

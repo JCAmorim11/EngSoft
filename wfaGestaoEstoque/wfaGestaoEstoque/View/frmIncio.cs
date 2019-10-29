@@ -21,5 +21,11 @@ namespace wfaGestaoEstoque
         {
 
         }
+
+        private void BtnCad_Click(object sender, EventArgs e)
+        {
+            View.frmCadConsum form = new View.frmCadConsum();
+            form.Show();
+        }
     }
 }
