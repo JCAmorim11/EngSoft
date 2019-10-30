@@ -15,22 +15,27 @@ namespace wfaGestaoEstoque.Controller
         #endregion
 
         #region MÉTODOS
-        public void CONsetcpf(string cpf)
-        {
-            this.CONcpf = cpf;
-        }
 
         public void CONsetnome(string nome)
         {
             this.CONnome = nome;
         }
-
-        public int CONvalidacpf(string cpf)
+        public bool CONinserecpf(string original)
+        {
+            if (CONvalidacpf(original))
+            {
+                this.CONcpf = original;
+                return true;
+            }
+            return false;
+            
+        }
+        public bool CONvalidacpf(string cpf)
         {
             string tempCPF = cpf.Replace(",", "").Replace("-", "").Replace(".", "");
 
             if (tempCPF.Length != 11)
-                return 0;
+                return false;
 
             int A = int.Parse(tempCPF.Substring(0, 1)) * 10;
             int B = int.Parse(tempCPF.Substring(1, 1)) * 9;
@@ -63,12 +68,12 @@ namespace wfaGestaoEstoque.Controller
                 soma = A + B + C + D + E + F + G + H + I + J;
                 resto = soma % 11;
                 if ((resto < 2 && K == 0) || 11 - resto == K)
-                    return 1;
+                    return true;
                 else
-                    return 0;
+                    return false;
             }
             else
-                return 0;
+                return false;
         }
 
         public int CONvalidaletranome(char e) //verifica letra por letra do nome

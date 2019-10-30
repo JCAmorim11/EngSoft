@@ -27,7 +27,7 @@ namespace wfaGestaoEstoque.View
             }
             else
             {
-                if (FCCconsumidor.CONvalidacpf(mskCPF.Text) == 0) //validação do campo mskCPF
+                if (!FCCconsumidor.CONinserecpf(mskCPF.Text)) //validação do campo mskCPF
                 {
                     MessageBox.Show("CPF inválido!");
                     mskCPF.Focus();
@@ -35,10 +35,11 @@ namespace wfaGestaoEstoque.View
                 else //caso todos os campos estejam preenchidos corretamente
                 {
                     FCCconsumidor.CONsetnome(txtNome.Text);
-                    FCCconsumidor.CONsetcpf(mskCPF.Text);
 
-                    label4.Text = FCCconsumidor.CONnome;
-                    label5.Text = FCCconsumidor.CONcpf;
+                    label4.Text = FCCconsumidor.CONcpf;
+                    label5.Text = FCCconsumidor.CONnome;
+
+                    
                 }
             }
         }

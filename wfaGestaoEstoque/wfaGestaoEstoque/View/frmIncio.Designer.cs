@@ -62,7 +62,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(338, 125);
+            this.button2.Location = new System.Drawing.Point(270, 319);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(104, 41);
             this.button2.TabIndex = 2;
@@ -116,9 +116,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(185, 310);
+            this.button1.Location = new System.Drawing.Point(339, 122);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 52);
+            this.button1.Size = new System.Drawing.Size(103, 52);
             this.button1.TabIndex = 8;
             this.button1.Text = "Locais";
             this.button1.UseVisualStyleBackColor = true;
