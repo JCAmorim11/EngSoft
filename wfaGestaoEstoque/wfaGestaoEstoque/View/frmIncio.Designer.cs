@@ -58,6 +58,7 @@
             this.btnCad.TabIndex = 1;
             this.btnCad.Text = "Cadastros";
             this.btnCad.UseVisualStyleBackColor = true;
+            this.btnCad.Click += new System.EventHandler(this.BtnCad_Click);
             // 
             // button2
             // 
