@@ -10,27 +10,36 @@ namespace wfaGestaoEstoque.Controller
     {
         #region ATRIBUTOS
         public string CONnome { get; private set; }
-
         public string CONcpf { get; private set; }
+        #endregion
+
+        #region CONSTRUTORES
+        public Consumidor(string nome,string cpf)
+        {
+            this.CONnome = nome;
+            this.CONcpf = cpf;
+        }
+        public Consumidor()
+        {
+            this.CONcpf = "";
+            this.CONcpf = "";
+        }
         #endregion
 
         #region MÉTODOS
 
-        public void CONsetnome(string nome)
+        public bool CONinsereCPF(string original)
         {
-            this.CONnome = nome;
-        }
-        public bool CONinserecpf(string original)
-        {
-            if (CONvalidacpf(original))
+            if (CONvalidaCPF(original))
             {
                 this.CONcpf = original;
                 return true;
             }
             return false;
-            
-        }
-        public bool CONvalidacpf(string cpf)
+
+        } //insere o cpf
+
+        public bool CONvalidaCPF(string cpf)
         {
             string tempCPF = cpf.Replace(",", "").Replace("-", "").Replace(".", "");
 
@@ -74,9 +83,9 @@ namespace wfaGestaoEstoque.Controller
             }
             else
                 return false;
-        }
+        } //valida o cpf
 
-        public int CONvalidaletranome(char e) //verifica letra por letra do nome
+        public int CONvalidaLetraNome(char e) //verifica letra por letra do nome
         {
             if ((!Char.IsLetter(e) && e != (Char)8) && e != (Char)32)
             {
@@ -86,7 +95,7 @@ namespace wfaGestaoEstoque.Controller
                 return 1;
         }
 
-        public int CONvalidanome(string nome) //verifica o nome inteiro a fim de evitar nomes em branco ou menores de 3 caracteres
+        public int CONvalidaNome(string nome) //verifica o nome inteiro a fim de evitar nomes em branco ou menores de 3 caracteres
         {
             string tempNome = nome.Trim();
             if (tempNome.Length < 3)

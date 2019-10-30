@@ -20,14 +20,14 @@ namespace wfaGestaoEstoque.View
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            if (FCCconsumidor.CONvalidanome(txtNome.Text) == 0) //validação do campo txtNome
+            if (FCCconsumidor.CONvalidaNome(txtNome.Text) == 0) //validação do campo txtNome
             {
                 MessageBox.Show("Nome inválido!");
                 txtNome.Focus();
             }
             else
             {
-                if (!FCCconsumidor.CONinserecpf(mskCPF.Text)) //validação do campo mskCPF
+                if (!FCCconsumidor.CONinsereCPF(mskCPF.Text)) //validação do campo mskCPF
                 {
                     MessageBox.Show("CPF inválido!");
                     mskCPF.Focus();

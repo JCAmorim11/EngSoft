@@ -13,15 +13,24 @@ namespace wfaGestaoEstoque.Controller
     #region Classe Login
     class Login
     {
-        public string CPF { get; set; }
+        #region ATRIBUTOS
+        public string User { get; private set; }
         public string senha { get; private set; }
+        #endregion
 
-    /*    public Login{
-            this.CPF="";
-            this.senha="admin";
-        }*/
-        
-        public bool CpfValido() {
+        #region CONSTRUTOR
+        public Login(string nome, string senha){
+            this.User=nome;
+            this.senha=senha;
+        }
+        public Login()
+        {
+            this.User = "admin";
+            this.senha = "senha";
+        }
+        #endregion
+
+        public bool UserValido() {
             return true;
         }
         public bool ValidarSenha()
