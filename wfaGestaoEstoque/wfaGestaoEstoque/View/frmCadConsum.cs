@@ -34,7 +34,7 @@ namespace wfaGestaoEstoque.View
                 }
                 else //caso todos os campos estejam preenchidos corretamente
                 {
-                    FCCconsumidor.CONsetnome(txtNome.Text);
+                    //FCCconsumidor.CONsetnome(txtNome.Text);
 
                     label4.Text = FCCconsumidor.CONcpf;
                     label5.Text = FCCconsumidor.CONnome;
@@ -46,10 +46,10 @@ namespace wfaGestaoEstoque.View
                 
         private void TxtNome_KeyPress(object sender, KeyPressEventArgs e) //verificação letra por letra do campo nome
         {
-            if (FCCconsumidor.CONvalidaletranome(e.KeyChar) == 0)
-            {                
-                e.KeyChar = (Char)0;
-            }
+            //if (FCCconsumidor.CONvalidaletranome(e.KeyChar) == 0)
+            //{                
+            //    e.KeyChar = (Char)0;
+           // }
         }
     }
 }

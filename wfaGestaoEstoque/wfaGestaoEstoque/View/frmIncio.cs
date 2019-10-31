@@ -26,6 +26,17 @@ namespace wfaGestaoEstoque
         {
             View.frmCadConsum form = new View.frmCadConsum();
             form.Show();
+     
+        }
+
+        private void frmIncio_Load(object sender, EventArgs e)
+        {
+            lblData.Text = "Olá, seja bem vindo! Hoje é " + DateTime.Now.ToString("dddd , MMM dd yyyy,hh:mm:ss");
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }
