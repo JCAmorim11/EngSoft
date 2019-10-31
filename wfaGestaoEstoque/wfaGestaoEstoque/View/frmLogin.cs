@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using wfaGestaoEstoque.View;
 
 namespace wfaGestaoEstoque.View
 {
@@ -33,7 +34,9 @@ namespace wfaGestaoEstoque.View
         {
             if (txtNome.Text == "admin" && txtSenha.Text == "admin")
             {
-                Form inicio = new frmIncio();
+                this.Hide();
+                var inicio = new frmIncio();
+                inicio.Closed += (s, args) => this.Close();
                 inicio.Show();
             }
             else

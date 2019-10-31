@@ -63,6 +63,16 @@ namespace wfaGestaoEstoque.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _57451 {
+            get {
+                object obj = ResourceManager.GetObject("57451", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _818643_amazing_bakery_wallpapers_1920x1200_picture {
             get {
                 object obj = ResourceManager.GetObject("818643-amazing-bakery-wallpapers-1920x1200-picture", resourceCulture);
@@ -76,6 +86,16 @@ namespace wfaGestaoEstoque.Properties {
         internal static System.Drawing.Bitmap logo {
             get {
                 object obj = ResourceManager.GetObject("logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sales_performance {
+            get {
+                object obj = ResourceManager.GetObject("sales-performance", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

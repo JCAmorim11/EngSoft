@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIncio));
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblSelecione = new System.Windows.Forms.Label();
             this.btnCad = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnCompras = new System.Windows.Forms.Button();
             this.btnVendas = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnInventario = new System.Windows.Forms.Button();
+            this.btnProdutos = new System.Windows.Forms.Button();
+            this.btnLocais = new System.Windows.Forms.Button();
+            this.lblFundoMenu = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -47,20 +47,25 @@
             this.label9 = new System.Windows.Forms.Label();
             this.lblData = new System.Windows.Forms.Label();
             this.pbInicio = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnLogout = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbInicio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lblSelecione
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label1.Font = new System.Drawing.Font("Verdana", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(34, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(480, 42);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "SELECIONE SEU DESTINO";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lblSelecione.AutoSize = true;
+            this.lblSelecione.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblSelecione.Font = new System.Drawing.Font("Letter Gothic Std", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSelecione.Location = new System.Drawing.Point(45, 10);
+            this.lblSelecione.Name = "lblSelecione";
+            this.lblSelecione.Size = new System.Drawing.Size(461, 44);
+            this.lblSelecione.TabIndex = 0;
+            this.lblSelecione.Text = "SELECIONE SEU DESTINO";
+            this.lblSelecione.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnCad
             // 
@@ -84,56 +89,58 @@
             // 
             // btnCompras
             // 
-            this.btnCompras.Location = new System.Drawing.Point(138, 291);
+            this.btnCompras.Location = new System.Drawing.Point(148, 297);
             this.btnCompras.Name = "btnCompras";
             this.btnCompras.Size = new System.Drawing.Size(102, 36);
             this.btnCompras.TabIndex = 3;
             this.btnCompras.Text = "Compras";
             this.btnCompras.UseVisualStyleBackColor = true;
+            this.btnCompras.Click += new System.EventHandler(this.btnCompras_Click);
             // 
             // btnVendas
             // 
-            this.btnVendas.Location = new System.Drawing.Point(138, 107);
+            this.btnVendas.Location = new System.Drawing.Point(138, 102);
             this.btnVendas.Name = "btnVendas";
             this.btnVendas.Size = new System.Drawing.Size(112, 43);
             this.btnVendas.TabIndex = 4;
             this.btnVendas.Text = "Vendas";
             this.btnVendas.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnInventario
             // 
-            this.button5.Location = new System.Drawing.Point(406, 107);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 43);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Inventario";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnInventario.Location = new System.Drawing.Point(406, 107);
+            this.btnInventario.Name = "btnInventario";
+            this.btnInventario.Size = new System.Drawing.Size(100, 43);
+            this.btnInventario.TabIndex = 5;
+            this.btnInventario.Text = "Inventario";
+            this.btnInventario.UseVisualStyleBackColor = true;
+            this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
             // 
-            // button6
+            // btnProdutos
             // 
-            this.button6.Location = new System.Drawing.Point(406, 192);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(104, 52);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Produtos";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnProdutos.Location = new System.Drawing.Point(406, 192);
+            this.btnProdutos.Name = "btnProdutos";
+            this.btnProdutos.Size = new System.Drawing.Size(104, 52);
+            this.btnProdutos.TabIndex = 6;
+            this.btnProdutos.Text = "Produtos";
+            this.btnProdutos.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnLocais
             // 
-            this.button1.Location = new System.Drawing.Point(138, 201);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 43);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Locais";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnLocais.Location = new System.Drawing.Point(138, 201);
+            this.btnLocais.Name = "btnLocais";
+            this.btnLocais.Size = new System.Drawing.Size(112, 43);
+            this.btnLocais.TabIndex = 8;
+            this.btnLocais.Text = "Locais";
+            this.btnLocais.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // lblFundoMenu
             // 
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(794, 93);
-            this.label2.TabIndex = 9;
+            this.lblFundoMenu.BackColor = System.Drawing.Color.Green;
+            this.lblFundoMenu.Location = new System.Drawing.Point(0, 0);
+            this.lblFundoMenu.Name = "lblFundoMenu";
+            this.lblFundoMenu.Size = new System.Drawing.Size(794, 93);
+            this.lblFundoMenu.TabIndex = 9;
             // 
             // label3
             // 
@@ -213,22 +220,59 @@
             this.pbInicio.TabIndex = 18;
             this.pbInicio.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Silver;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Image = global::wfaGestaoEstoque.Properties.Resources.sales_performance;
+            this.pictureBox1.Location = new System.Drawing.Point(50, 96);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(69, 57);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Silver;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox2.Image = global::wfaGestaoEstoque.Properties.Resources._57451;
+            this.pictureBox2.Location = new System.Drawing.Point(50, 283);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(69, 57);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 20;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Location = new System.Drawing.Point(525, 10);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(104, 41);
+            this.btnLogout.TabIndex = 21;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // frmIncio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::wfaGestaoEstoque.Properties.Resources._818643_amazing_bakery_wallpapers_1920x1200_picture;
             this.ClientSize = new System.Drawing.Size(780, 380);
+            this.Controls.Add(this.btnLogout);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pbInicio);
             this.Controls.Add(this.lblData);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnLocais);
+            this.Controls.Add(this.btnProdutos);
+            this.Controls.Add(this.btnInventario);
             this.Controls.Add(this.btnVendas);
             this.Controls.Add(this.btnCompras);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnCad);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblSelecione);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
@@ -236,14 +280,17 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblFundoMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmIncio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
             this.Load += new System.EventHandler(this.frmIncio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbInicio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,15 +298,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblSelecione;
         private System.Windows.Forms.Button btnCad;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button btnCompras;
         private System.Windows.Forms.Button btnVendas;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnInventario;
+        private System.Windows.Forms.Button btnProdutos;
+        private System.Windows.Forms.Button btnLocais;
+        private System.Windows.Forms.Label lblFundoMenu;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -269,6 +316,9 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblData;
         private System.Windows.Forms.PictureBox pbInicio;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnLogout;
     }
 }
 
