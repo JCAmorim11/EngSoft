@@ -33,7 +33,7 @@ namespace wfaGestaoEstoque
 
         private void frmIncio_Load(object sender, EventArgs e)
         {
-            lblData.Text = "Olá, seja bem vindo! Hoje é " + DateTime.Now.ToString("dddd , MMM dd yyyy,hh:mm:ss");
+            lblData.Text = "Olá, seja bem vindo! Hoje é " + DateTime.Now.ToString("dddd, dd MMM yyyy, HH:mm:ss");
             Color mycolor = Color.FromArgb(100, Color.DarkGray);
             lblFundoMenu.BackColor = mycolor;
             lblSelecione.BackColor = mycolor;

@@ -80,6 +80,7 @@
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(321, 26);
             this.txtSenha.TabIndex = 3;
+            this.txtSenha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtSenha_KeyPress);
             // 
             // btnEntrar
             // 

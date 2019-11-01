@@ -44,5 +44,11 @@ namespace wfaGestaoEstoque.View
                 lblErro.Visible = true;
             }
         }
+
+        private void TxtSenha_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (Char)13)
+                btnEntrar.PerformClick();
+        }
     }
 }

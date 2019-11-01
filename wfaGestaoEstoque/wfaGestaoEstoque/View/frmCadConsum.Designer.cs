@@ -34,8 +34,7 @@
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.mskCPF = new System.Windows.Forms.MaskedTextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblValida = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -61,16 +60,17 @@
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(121, 82);
+            this.txtNome.MaxLength = 50;
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(100, 20);
+            this.txtNome.Size = new System.Drawing.Size(131, 20);
             this.txtNome.TabIndex = 2;
             this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNome_KeyPress);
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(40, 167);
+            this.btnCadastrar.Location = new System.Drawing.Point(55, 167);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(212, 23);
+            this.btnCadastrar.Size = new System.Drawing.Size(197, 23);
             this.btnCadastrar.TabIndex = 4;
             this.btnCadastrar.Text = "CADASTRAR";
             this.btnCadastrar.UseVisualStyleBackColor = true;
@@ -91,34 +91,28 @@
             this.mskCPF.Location = new System.Drawing.Point(121, 128);
             this.mskCPF.Mask = "999,999,999-99";
             this.mskCPF.Name = "mskCPF";
-            this.mskCPF.Size = new System.Drawing.Size(100, 20);
-            this.mskCPF.TabIndex = 6;
+            this.mskCPF.Size = new System.Drawing.Size(85, 20);
+            this.mskCPF.TabIndex = 3;
+            this.mskCPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MskCPF_KeyPress);
             // 
-            // label4
+            // lblValida
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(71, 243);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "label4";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(71, 274);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "label5";
+            this.lblValida.AutoSize = true;
+            this.lblValida.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValida.ForeColor = System.Drawing.Color.LimeGreen;
+            this.lblValida.Location = new System.Drawing.Point(272, 171);
+            this.lblValida.Name = "lblValida";
+            this.lblValida.Size = new System.Drawing.Size(132, 14);
+            this.lblValida.TabIndex = 7;
+            this.lblValida.Text = "Cadastro realizado!";
+            this.lblValida.Visible = false;
             // 
             // frmCadConsum
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(429, 335);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.ClientSize = new System.Drawing.Size(429, 207);
+            this.Controls.Add(this.lblValida);
             this.Controls.Add(this.mskCPF);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnCadastrar);
@@ -140,7 +134,6 @@
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.MaskedTextBox mskCPF;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblValida;
     }
 }
