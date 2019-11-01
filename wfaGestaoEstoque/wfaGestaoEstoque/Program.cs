@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using wfaGestaoEstoque.View;
 
 namespace wfaGestaoEstoque
 {
@@ -16,7 +17,7 @@ namespace wfaGestaoEstoque
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmIncio());
+            Application.Run(new frmLogin());
         }
     }
 }
