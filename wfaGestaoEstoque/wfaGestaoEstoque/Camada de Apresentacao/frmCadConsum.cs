@@ -34,21 +34,22 @@ namespace wfaGestaoEstoque.View
                 }
                 else //caso todos os campos estejam preenchidos corretamente
                 {
+                   // FCCconsumidor.CONvalidaNome(txtNome.Text);
+
                     label4.Text = FCCconsumidor.CONcpf;
                     label5.Text = FCCconsumidor.CONnome;
+
+                    
                 }
             }
         }
                 
         private void TxtNome_KeyPress(object sender, KeyPressEventArgs e) //verificação letra por letra do campo nome
         {
-
-            if (!FCCconsumidor.CONvalidaLetraNome(e.KeyChar))
+            if (FCCconsumidor.CONvalidaLetraNome(e.KeyChar) == 0)
             {                
                 e.KeyChar = (Char)0;
             }
         }
-
-
     }
 }

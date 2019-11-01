@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace wfaGestaoEstoque.View
 {
-    public partial class frmInventario : Form
+    public partial class frmFornecedores : Form
     {
-        public frmInventario()
+        public frmFornecedores()
         {
             InitializeComponent();
+        }
+
+        private void frmFornecedores_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace wfaGestaoEstoque.View
 {
-    public partial class frmInventario : Form
+    public partial class frmVendas : Form
     {
-        public frmInventario()
+        public frmVendas()
         {
             InitializeComponent();
         }

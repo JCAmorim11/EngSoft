@@ -16,7 +16,7 @@ namespace wfaGestaoEstoque.Controller
         #region ATRIBUTOS
         public string User { get; private set; }
         public string senha { get; private set; }
-        #endregion ATRIBUTOS
+        #endregion
 
         #region CONSTRUTOR
         public Login(string nome, string senha){
@@ -28,18 +28,17 @@ namespace wfaGestaoEstoque.Controller
             this.User = "admin";
             this.senha = "senha";
         }
-        #endregion CONSTRUTOR
+        #endregion
 
         #region MÉTODOS
-        public bool UserValido() {
+        public bool LOGuserValido() {
             return true;
         }
-        public bool ValidarSenha()
+        public bool LOGvalidarSenha()
         {
             return true;
         }
-        #endregion MÉTODOS
+        #endregion
     }
-
+    #endregion
 }
-#endregion Classe login

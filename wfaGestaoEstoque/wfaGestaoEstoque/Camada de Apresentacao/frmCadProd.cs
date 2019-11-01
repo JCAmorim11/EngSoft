@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace wfaGestaoEstoque.View
 {
-    public partial class frmInventario : Form
+    public partial class frmCadProd : Form
     {
-        public frmInventario()
+        public frmCadProd()
         {
             InitializeComponent();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

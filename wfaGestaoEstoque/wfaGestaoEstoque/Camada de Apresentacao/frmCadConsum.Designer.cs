@@ -127,7 +127,6 @@
             this.Controls.Add(this.label1);
             this.Name = "frmCadConsum";
             this.Text = "frmCadConsum";
-            
             this.ResumeLayout(false);
             this.PerformLayout();
 

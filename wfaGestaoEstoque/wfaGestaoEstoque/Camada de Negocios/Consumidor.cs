@@ -11,7 +11,7 @@ namespace wfaGestaoEstoque.Controller
         #region ATRIBUTOS
         public string CONnome { get; private set; }
         public string CONcpf { get; private set; }
-        #endregion ATRIBUTOS
+        #endregion
 
         #region CONSTRUTORES
         public Consumidor(string nome,string cpf)
@@ -21,7 +21,7 @@ namespace wfaGestaoEstoque.Controller
         }
         public Consumidor()
         {
-            this.CONnome = "";
+            this.CONcpf = "";
             this.CONcpf = "";
         }
         #endregion
@@ -29,25 +29,25 @@ namespace wfaGestaoEstoque.Controller
         #region MÉTODOS
 
         public bool CONinsereCPF(string original)
-        {
+        {//insere o cpf
             if (CONvalidaCPF(original))
             {
-                this.CONcpf = original;
+                CONcpf = original;
                 return true;
             }
             return false;
 
-        } //insere o cpf
+        } 
 
         public bool CONinsereNome(string nome)
-        {
+        { //Insere o nome
             if (CONvalidaNome(nome))
             {
                 CONnome = nome;
                 return true;
             }
             return false;
-        }//Insere o nome
+        }
 
         public bool CONvalidaCPF(string cpf)
         {
@@ -95,14 +95,14 @@ namespace wfaGestaoEstoque.Controller
                 return false;
         } //valida o cpf
 
-        public bool CONvalidaLetraNome(char e) //verifica letra por letra do nome
+        public int CONvalidaLetraNome(char e) //verifica letra por letra do nome
         {
             if ((!Char.IsLetter(e) && e != (Char)8) && e != (Char)32)
             {
-                return false;
+                return 0;
             }
             else
-                return true;
+                return 1;
         }
 
         public bool CONvalidaNome(string nome) //verifica o nome inteiro a fim de evitar nomes em branco ou menores de 3 caracteres
@@ -112,6 +112,7 @@ namespace wfaGestaoEstoque.Controller
                 return false;
             return true;
         }
-        #endregion MÉTODOS
+       
+        #endregion
     }
 }

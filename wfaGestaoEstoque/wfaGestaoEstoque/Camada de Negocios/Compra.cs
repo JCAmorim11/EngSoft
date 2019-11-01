@@ -23,11 +23,10 @@ namespace wfaGestaoEstoque.Controller
 
         #region CONSTRUTORES
         public Compra() {
-            this.COMdata = new int[3] { 01, 01, 1970 };
             this.COMid = "";
             this.COMpreço = 0.00;
-            this.COMstatus = new int[4] {0,1,2,3};
-            
+            this.COMdata = new int[3] { 01, 01, 1970 };
+            this.COMstatus = new int[4] { 0, 1, 2, 3 };
         }
         public Compra(string id,double preco, int[] data, int[] COMstatus)
         {
@@ -43,6 +42,21 @@ namespace wfaGestaoEstoque.Controller
          * public int[] Consumidor(int[] vetor) {
              return vetor;
          }*/
+        /*public void COMinserirID() {
+            //insere o ID 
+        }*/
+        public bool CONinserePreco()
+        {
+            return true;
+        }
+        public bool CONinsereData()
+        {
+            return true;
+        }
+        public bool CONinsereStatus()
+        {
+            return true;
+        }
         #endregion MÉTODOS
 
     }

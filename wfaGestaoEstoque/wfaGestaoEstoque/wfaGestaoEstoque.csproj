@@ -61,85 +61,85 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\Compra.cs" />
-    <Compile Include="Controller\Fornecedor.cs" />
-    <Compile Include="Controller\Login.cs" />
-    <Compile Include="Controller\Produto.cs" />
-    <Compile Include="Controller\Consumidor.cs" />
-    <Compile Include="Controller\Venda.cs" />
-    <Compile Include="Model\Conexao.cs" />
-    <Compile Include="View\frmCadConsum.cs">
+    <Compile Include="Camada de Negocios\Compra.cs" />
+    <Compile Include="Camada de Negocios\Fornecedor.cs" />
+    <Compile Include="Camada de Negocios\Login.cs" />
+    <Compile Include="Camada de Negocios\Produto.cs" />
+    <Compile Include="Camada de Negocios\Consumidor.cs" />
+    <Compile Include="Camada de Negocios\Venda.cs" />
+    <Compile Include="Camada de Dados\Conexao.cs" />
+    <Compile Include="Camada de Apresentacao\frmCadConsum.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmCadConsum.Designer.cs">
+    <Compile Include="Camada de Apresentacao\frmCadConsum.Designer.cs">
       <DependentUpon>frmCadConsum.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmCadForn.cs">
+    <Compile Include="Camada de Apresentacao\frmCadForn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmCadForn.Designer.cs">
+    <Compile Include="Camada de Apresentacao\frmCadForn.Designer.cs">
       <DependentUpon>frmCadForn.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmCadProd.cs">
+    <Compile Include="Camada de Apresentacao\frmCadProd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmCadProd.Designer.cs">
+    <Compile Include="Camada de Apresentacao\frmCadProd.Designer.cs">
       <DependentUpon>frmCadProd.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmCompras.cs">
+    <Compile Include="Camada de Apresentacao\frmCompras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmCompras.Designer.cs">
+    <Compile Include="Camada de Apresentacao\frmCompras.Designer.cs">
       <DependentUpon>frmCompras.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmFornecedores.cs">
+    <Compile Include="Camada de Apresentacao\frmFornecedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmFornecedores.Designer.cs">
+    <Compile Include="Camada de Apresentacao\frmFornecedores.Designer.cs">
       <DependentUpon>frmFornecedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmIncio.cs">
+    <Compile Include="Camada de Apresentacao\frmIncio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmIncio.Designer.cs">
+    <Compile Include="Camada de Apresentacao\frmIncio.Designer.cs">
       <DependentUpon>frmIncio.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\frmInventario.cs">
+    <Compile Include="Camada de Apresentacao\frmInventario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmInventario.Designer.cs">
+    <Compile Include="Camada de Apresentacao\frmInventario.Designer.cs">
       <DependentUpon>frmInventario.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmLogin.cs">
+    <Compile Include="Camada de Apresentacao\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmLogin.Designer.cs">
+    <Compile Include="Camada de Apresentacao\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmVendas.cs">
+    <Compile Include="Camada de Apresentacao\frmVendas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmVendas.Designer.cs">
+    <Compile Include="Camada de Apresentacao\frmVendas.Designer.cs">
       <DependentUpon>frmVendas.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\frmCadConsum.resx">
+    <EmbeddedResource Include="Camada de Apresentacao\frmCadConsum.resx">
       <DependentUpon>frmCadConsum.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmCadForn.resx">
+    <EmbeddedResource Include="Camada de Apresentacao\frmCadForn.resx">
       <DependentUpon>frmCadForn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmCadProd.resx">
+    <EmbeddedResource Include="Camada de Apresentacao\frmCadProd.resx">
       <DependentUpon>frmCadProd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmCompras.resx">
+    <EmbeddedResource Include="Camada de Apresentacao\frmCompras.resx">
       <DependentUpon>frmCompras.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmFornecedores.resx">
+    <EmbeddedResource Include="Camada de Apresentacao\frmFornecedores.resx">
       <DependentUpon>frmFornecedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmIncio.resx">
+    <EmbeddedResource Include="Camada de Apresentacao\frmIncio.resx">
       <DependentUpon>frmIncio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -152,10 +152,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="View\frmInventario.resx">
+    <EmbeddedResource Include="Camada de Apresentacao\frmInventario.resx">
       <DependentUpon>frmInventario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmLogin.resx">
+    <EmbeddedResource Include="Camada de Apresentacao\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
