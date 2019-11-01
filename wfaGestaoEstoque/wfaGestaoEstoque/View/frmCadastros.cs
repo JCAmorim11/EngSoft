@@ -41,5 +41,13 @@ namespace wfaGestaoEstoque.View
             prod.Closed += (s, args) => this.Close();
             prod.Show();
         }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var menu = new frmIncio();
+            menu.Closed += (s, args) => this.Close();
+            menu.Show();
+        }
     }
 }

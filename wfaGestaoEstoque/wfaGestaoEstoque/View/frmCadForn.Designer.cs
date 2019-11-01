@@ -57,6 +57,7 @@
             // btnLimpar
             // 
             this.btnLimpar.BackColor = System.Drawing.Color.Chocolate;
+            this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpar.Location = new System.Drawing.Point(78, 328);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(75, 23);
@@ -229,11 +230,12 @@
             // 
             // btnInicio
             // 
+            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInicio.Location = new System.Drawing.Point(485, 74);
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Size = new System.Drawing.Size(86, 47);
             this.btnInicio.TabIndex = 21;
-            this.btnInicio.Text = "Inicio";
+            this.btnInicio.Text = "Voltar";
             this.btnInicio.UseVisualStyleBackColor = true;
             this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
@@ -256,6 +258,7 @@
             // btnConfirma
             // 
             this.btnConfirma.BackColor = System.Drawing.Color.Chocolate;
+            this.btnConfirma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirma.Location = new System.Drawing.Point(321, 328);
             this.btnConfirma.Name = "btnConfirma";
             this.btnConfirma.Size = new System.Drawing.Size(75, 23);

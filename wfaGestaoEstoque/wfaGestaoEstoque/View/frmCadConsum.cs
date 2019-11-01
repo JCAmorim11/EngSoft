@@ -35,7 +35,8 @@ namespace wfaGestaoEstoque.View
                 }
                 else //caso todos os campos estejam preenchidos corretamente
                 {
-                    FCCconsumidor.CONvalidaNome(txtNome.Text);                    
+                    FCCconsumidor.CONvalidaNome(txtNome.Text);
+                    lblSucesso.Visible = true;
                 }
             }
         }
@@ -54,6 +55,26 @@ namespace wfaGestaoEstoque.View
             var inicio = new frmIncio();
             inicio.Closed += (s, args) => this.Close();
             inicio.Show();
+        }
+
+        private void lblFundo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmCadConsum_Load(object sender, EventArgs e)
+        {
+            Color mycolor = Color.FromArgb(180, Color.LightGray);
+            lblFundo.BackColor = mycolor;
+            lblTitulo.BackColor = mycolor;
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            lblSucesso.Visible = false;
+            txtNome.Text = "";
+            mskCPF.Text = "";
+            txtNome.Focus();
         }
     }
 }

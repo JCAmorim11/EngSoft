@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadProd));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,13 +42,15 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.btnInicio = new System.Windows.Forms.Button();
+            this.lblFundo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(64, 98);
             this.label1.Name = "label1";
@@ -58,6 +61,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(62, 131);
             this.label2.Name = "label2";
@@ -68,6 +72,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(62, 159);
             this.label3.Name = "label3";
@@ -99,6 +104,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(62, 188);
             this.label4.Name = "label4";
@@ -115,16 +121,19 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(63, 311);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(127, 302);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 8;
             this.button1.Text = "Cadastrar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(64, 249);
             this.label6.Name = "label6";
@@ -143,6 +152,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(62, 214);
             this.label5.Name = "label5";
@@ -157,33 +167,46 @@
             this.textBox5.Size = new System.Drawing.Size(100, 20);
             this.textBox5.TabIndex = 14;
             // 
-            // label7
+            // lblTitulo
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Verdana", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(56, 20);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(377, 42);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Cadastro de Produto";
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.BackColor = System.Drawing.Color.White;
+            this.lblTitulo.Font = new System.Drawing.Font("Letter Gothic Std", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(70, 28);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(419, 44);
+            this.lblTitulo.TabIndex = 15;
+            this.lblTitulo.Text = "Cadastro de Produto";
             // 
             // btnInicio
             // 
+            this.btnInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInicio.Location = new System.Drawing.Point(421, 115);
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Size = new System.Drawing.Size(86, 47);
             this.btnInicio.TabIndex = 16;
-            this.btnInicio.Text = "Inicio";
-            this.btnInicio.UseVisualStyleBackColor = true;
+            this.btnInicio.Text = "Voltar";
+            this.btnInicio.UseVisualStyleBackColor = false;
             this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
+            // 
+            // lblFundo
+            // 
+            this.lblFundo.BackColor = System.Drawing.Color.White;
+            this.lblFundo.Location = new System.Drawing.Point(12, 9);
+            this.lblFundo.Name = "lblFundo";
+            this.lblFundo.Size = new System.Drawing.Size(532, 348);
+            this.lblFundo.TabIndex = 17;
             // 
             // frmCadProd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::wfaGestaoEstoque.Properties.Resources._818643_amazing_bakery_wallpapers_1920x1200_picture;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(556, 366);
             this.Controls.Add(this.btnInicio);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox6);
@@ -197,9 +220,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblFundo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCadProd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmCadProd";
+            this.Text = "Cadastro de produto";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,7 +245,8 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Button btnInicio;
+        private System.Windows.Forms.Label lblFundo;
     }
 }

@@ -306,12 +306,13 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblFundoMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmIncio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Inicio";
+            this.Text = "Menu";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmIncio_FormClosing);
             this.Load += new System.EventHandler(this.frmIncio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbInicio)).EndInit();

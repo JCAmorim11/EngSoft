@@ -32,6 +32,7 @@
             this.btnConsumidores = new System.Windows.Forms.Button();
             this.btnFornecedores = new System.Windows.Forms.Button();
             this.btnProdutos = new System.Windows.Forms.Button();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnConsumidores
@@ -64,15 +65,29 @@
             this.btnProdutos.UseVisualStyleBackColor = true;
             this.btnProdutos.Click += new System.EventHandler(this.btnProdutos_Click);
             // 
+            // btnVoltar
+            // 
+            this.btnVoltar.Location = new System.Drawing.Point(8, 183);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(233, 51);
+            this.btnVoltar.TabIndex = 3;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
             // frmCadastros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(247, 182);
+            this.ClientSize = new System.Drawing.Size(247, 239);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnProdutos);
             this.Controls.Add(this.btnFornecedores);
             this.Controls.Add(this.btnConsumidores);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmCadastros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastros";
@@ -85,5 +100,6 @@
         private System.Windows.Forms.Button btnConsumidores;
         private System.Windows.Forms.Button btnFornecedores;
         private System.Windows.Forms.Button btnProdutos;
+        private System.Windows.Forms.Button btnVoltar;
     }
 }

@@ -58,6 +58,7 @@
             // 
             // button1
             // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(38, 307);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(111, 23);
@@ -67,6 +68,7 @@
             // 
             // button2
             // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(155, 307);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(97, 23);
@@ -80,7 +82,7 @@
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Size = new System.Drawing.Size(75, 23);
             this.btnInicio.TabIndex = 4;
-            this.btnInicio.Text = "Inicio";
+            this.btnInicio.Text = "Voltar";
             this.btnInicio.UseVisualStyleBackColor = true;
             this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
