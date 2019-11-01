@@ -20,22 +20,22 @@ namespace GestaoEstoque
         private void BtnCad_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var cadCons = new frmCadConsum();
-            cadCons.Closed += (s, args) => this.Close();
-            cadCons.Show();
+            var cad = new frmCadastros();
+            cad.Closed += (s, args) => this.Close();
+            cad.Show();
         }
 
         private void frmIncio_Load(object sender, EventArgs e)
         {
-            lblData.Text = "Olá, seja bem vindo! Hoje é " + DateTime.Now.ToString("dddd, dd MMM yyyy, HH:mm:ss");
             Color mycolor = Color.FromArgb(100, Color.DarkGray);
+            //lblBarra.BackColor = mycolor;
             lblFundoMenu.BackColor = mycolor;
             lblSelecione.BackColor = mycolor;
         }
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            this.Close();
         }
 
         private void btnInventario_Click(object sender, EventArgs e)
@@ -60,6 +60,31 @@ namespace GestaoEstoque
             var login = new frmLogin();
             login.Closed += (s, args) => this.Close();
             login.Show();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            string userName = Program.globalString;
+            lblData.Text = "Olá, " + userName + ", seja bem vindo(a)! Hoje é " + DateTime.Now.Date.ToString("dddd, dd MMM yyyy, ") + "são "
+                + DateTime.Now.ToString("HH:mm:ss tt");
+        }
+
+        private void btnVendas_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var vendas = new frmVendas();
+            vendas.Closed += (s, args) => this.Close();
+            vendas.Show();
+        }
+
+        private void frmIncio_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Deseja mesmo sair?", "ATENÇÃO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+                Environment.Exit(0);
         }
     }
 }

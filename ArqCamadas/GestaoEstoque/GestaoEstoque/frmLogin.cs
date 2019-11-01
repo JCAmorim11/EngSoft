@@ -34,6 +34,7 @@ namespace GestaoEstoque
         {
             if (txtNome.Text == "admin" && txtSenha.Text == "admin")
             {
+                Program.globalString = txtNome.Text;
                 this.Hide();
                 var inicio = new frmIncio();
                 inicio.Closed += (s, args) => this.Close();
@@ -42,6 +43,9 @@ namespace GestaoEstoque
             else
             {
                 lblErro.Visible = true;
+                txtNome.Text = "";
+                txtSenha.Text = "";
+                txtNome.Focus();
             }
         }
 
@@ -49,6 +53,16 @@ namespace GestaoEstoque
         {
             if (e.KeyChar == (Char)13)
                 btnEntrar.PerformClick();
+        }
+
+        private void FrmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Deseja mesmo sair?", "ATENÇÃO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+                Environment.Exit(0);
         }
     }
 }

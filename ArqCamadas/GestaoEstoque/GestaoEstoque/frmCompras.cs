@@ -35,5 +35,15 @@ namespace GestaoEstoque
             Color mycolor = Color.FromArgb(150, Color.DarkGray);
             lblFundo.BackColor = mycolor;
         }
+
+        private void frmCompras_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Deseja mesmo sair?", "ATENÇÃO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+                Environment.Exit(0);
+        }
     }
 }

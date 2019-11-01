@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CamadaDeNegocios;
 
 namespace GestaoEstoque
 {
@@ -17,8 +16,7 @@ namespace GestaoEstoque
         {
             InitializeComponent();
         }
-
-        CamadaDeNegocios.Consumidor FCCconsumidor = new CamadaDeNegocios.Consumidor();
+        CamadaDeNegocios.Consumidor FCCconsumidor = new CamadaDeNegocios.Consumidor(); //FCC = frmCadConsum
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
@@ -37,7 +35,7 @@ namespace GestaoEstoque
                 else //caso todos os campos estejam preenchidos corretamente
                 {
                     FCCconsumidor.CONvalidaNome(txtNome.Text);
-                    label4.Visible = true;
+                    lblSucesso.Visible = true;
                 }
             }
         }
@@ -50,10 +48,42 @@ namespace GestaoEstoque
             }
         }
 
-        private void mskCPF_KeyPress(object sender, KeyPressEventArgs e)
+        private void btnInicio_Click(object sender, EventArgs e)
         {
-            if (e.KeyChar == (Char)13)
-                btnCadastrar.PerformClick();
+            this.Hide();
+            var inicio = new frmIncio();
+            inicio.Closed += (s, args) => this.Close();
+            inicio.Show();
+        }
+
+        private void lblFundo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmCadConsum_Load(object sender, EventArgs e)
+        {
+            Color mycolor = Color.FromArgb(180, Color.LightGray);
+            lblFundo.BackColor = mycolor;
+            lblTitulo.BackColor = mycolor;
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            lblSucesso.Visible = false;
+            txtNome.Text = "";
+            mskCPF.Text = "";
+            txtNome.Focus();
+        }
+
+        private void frmCadConsum_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Deseja mesmo sair?", "ATENÇÃO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+                Environment.Exit(0);
         }
     }
 }
