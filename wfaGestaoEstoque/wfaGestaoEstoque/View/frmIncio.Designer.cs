@@ -65,7 +65,6 @@
             this.lblSelecione.Size = new System.Drawing.Size(461, 44);
             this.lblSelecione.TabIndex = 0;
             this.lblSelecione.Text = "SELECIONE SEU DESTINO";
-            this.lblSelecione.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnCad
             // 

@@ -117,6 +117,12 @@
     <Compile Include="View\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmVendas.Designer.cs">
+      <DependentUpon>frmVendas.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\frmCadConsum.resx">
       <DependentUpon>frmCadConsum.cs</DependentUpon>
     </EmbeddedResource>

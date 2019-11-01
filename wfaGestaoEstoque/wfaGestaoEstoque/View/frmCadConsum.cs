@@ -20,7 +20,7 @@ namespace wfaGestaoEstoque.View
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            if (FCCconsumidor.CONvalidaNome(txtNome.Text) == 0) //validação do campo txtNome
+            if (!FCCconsumidor.CONinsereNome(txtNome.Text)) //validação do campo txtNome
             {
                 MessageBox.Show("Nome inválido!");
                 txtNome.Focus();
@@ -34,7 +34,7 @@ namespace wfaGestaoEstoque.View
                 }
                 else //caso todos os campos estejam preenchidos corretamente
                 {
-                    //FCCconsumidor.CONsetnome(txtNome.Text);
+                    FCCconsumidor.CONvalidaNome(txtNome.Text);
 
                     label4.Text = FCCconsumidor.CONcpf;
                     label5.Text = FCCconsumidor.CONnome;
@@ -46,10 +46,10 @@ namespace wfaGestaoEstoque.View
                 
         private void TxtNome_KeyPress(object sender, KeyPressEventArgs e) //verificação letra por letra do campo nome
         {
-            //if (FCCconsumidor.CONvalidaletranome(e.KeyChar) == 0)
-            //{                
-            //    e.KeyChar = (Char)0;
-           // }
+            if (FCCconsumidor.CONvalidaLetraNome(e.KeyChar) == 0)
+            {                
+                e.KeyChar = (Char)0;
+            }
         }
     }
 }

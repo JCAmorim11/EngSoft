@@ -29,15 +29,25 @@ namespace wfaGestaoEstoque.Controller
         #region MÉTODOS
 
         public bool CONinsereCPF(string original)
-        {
+        {//insere o cpf
             if (CONvalidaCPF(original))
             {
-                this.CONcpf = original;
+                CONcpf = original;
                 return true;
             }
             return false;
 
-        } //insere o cpf
+        } 
+
+        public bool CONinsereNome(string nome)
+        { //Insere o nome
+            if (CONvalidaNome(nome))
+            {
+                CONnome = nome;
+                return true;
+            }
+            return false;
+        }
 
         public bool CONvalidaCPF(string cpf)
         {
@@ -95,13 +105,14 @@ namespace wfaGestaoEstoque.Controller
                 return 1;
         }
 
-        public int CONvalidaNome(string nome) //verifica o nome inteiro a fim de evitar nomes em branco ou menores de 3 caracteres
+        public bool CONvalidaNome(string nome) //verifica o nome inteiro a fim de evitar nomes em branco ou menores de 3 caracteres
         {
             string tempNome = nome.Trim();
             if (tempNome.Length < 3)
-                return 0;
-            return 1;
+                return false;
+            return true;
         }
+       
         #endregion
     }
 }
