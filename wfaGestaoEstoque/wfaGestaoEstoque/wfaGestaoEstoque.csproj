@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\Compra.cs" />
+    <Compile Include="Controller\Fornecedor.cs" />
     <Compile Include="Controller\Login.cs" />
     <Compile Include="Controller\Produto.cs" />
     <Compile Include="Controller\Consumidor.cs" />

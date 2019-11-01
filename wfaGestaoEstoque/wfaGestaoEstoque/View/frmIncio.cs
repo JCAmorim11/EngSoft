@@ -18,8 +18,6 @@ namespace wfaGestaoEstoque
             InitializeComponent();
         }
 
-
-
         private void BtnCad_Click(object sender, EventArgs e)
         {
             this.Hide();
