@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using wfaGestaoEstoque.View;
 
 namespace wfaGestaoEstoque.View
 {
@@ -25,6 +26,14 @@ namespace wfaGestaoEstoque.View
         private void label7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var inicio = new frmIncio();
+            inicio.Closed += (s, args) => this.Close();
+            inicio.Show();
         }
     }
 }

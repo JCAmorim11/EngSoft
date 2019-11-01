@@ -42,6 +42,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnInicio = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -166,11 +167,22 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Cadastro de Produto";
             // 
+            // btnInicio
+            // 
+            this.btnInicio.Location = new System.Drawing.Point(421, 115);
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.Size = new System.Drawing.Size(86, 47);
+            this.btnInicio.TabIndex = 16;
+            this.btnInicio.Text = "Inicio";
+            this.btnInicio.UseVisualStyleBackColor = true;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
+            // 
             // frmCadProd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(556, 366);
+            this.Controls.Add(this.btnInicio);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label5);
@@ -186,6 +198,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmCadProd";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCadProd";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -208,5 +221,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnInicio;
     }
 }

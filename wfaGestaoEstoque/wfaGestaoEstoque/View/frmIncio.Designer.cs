@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIncio));
             this.lblSelecione = new System.Windows.Forms.Label();
             this.btnCad = new System.Windows.Forms.Button();
@@ -35,24 +36,26 @@
             this.btnCompras = new System.Windows.Forms.Button();
             this.btnVendas = new System.Windows.Forms.Button();
             this.btnInventario = new System.Windows.Forms.Button();
-            this.btnProdutos = new System.Windows.Forms.Button();
-            this.btnLocais = new System.Windows.Forms.Button();
             this.lblFundoMenu = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.lblData = new System.Windows.Forms.Label();
             this.pbInicio = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.lblBarra = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbInicio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // lblSelecione
@@ -60,78 +63,79 @@
             this.lblSelecione.AutoSize = true;
             this.lblSelecione.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblSelecione.Font = new System.Drawing.Font("Letter Gothic Std", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelecione.Location = new System.Drawing.Point(45, 10);
+            this.lblSelecione.Location = new System.Drawing.Point(363, 9);
             this.lblSelecione.Name = "lblSelecione";
-            this.lblSelecione.Size = new System.Drawing.Size(461, 44);
+            this.lblSelecione.Size = new System.Drawing.Size(314, 44);
             this.lblSelecione.TabIndex = 0;
-            this.lblSelecione.Text = "SELECIONE SEU DESTINO";
+            this.lblSelecione.Text = "MENU PRINCIPAL";
             // 
             // btnCad
             // 
-            this.btnCad.Location = new System.Drawing.Point(406, 291);
+            this.btnCad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnCad.FlatAppearance.BorderSize = 0;
+            this.btnCad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnCad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCad.Location = new System.Drawing.Point(626, 259);
             this.btnCad.Name = "btnCad";
-            this.btnCad.Size = new System.Drawing.Size(90, 49);
+            this.btnCad.Size = new System.Drawing.Size(113, 47);
             this.btnCad.TabIndex = 1;
             this.btnCad.Text = "Cadastros";
-            this.btnCad.UseVisualStyleBackColor = true;
+            this.btnCad.UseVisualStyleBackColor = false;
             this.btnCad.Click += new System.EventHandler(this.BtnCad_Click);
             // 
             // btnSair
             // 
-            this.btnSair.Location = new System.Drawing.Point(635, 10);
+            this.btnSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSair.Location = new System.Drawing.Point(23, 334);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(104, 41);
+            this.btnSair.Size = new System.Drawing.Size(186, 26);
             this.btnSair.TabIndex = 2;
             this.btnSair.Text = "Sair";
-            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnCompras
             // 
-            this.btnCompras.Location = new System.Drawing.Point(148, 297);
+            this.btnCompras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnCompras.FlatAppearance.BorderSize = 0;
+            this.btnCompras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCompras.Location = new System.Drawing.Point(381, 263);
             this.btnCompras.Name = "btnCompras";
-            this.btnCompras.Size = new System.Drawing.Size(102, 36);
+            this.btnCompras.Size = new System.Drawing.Size(112, 43);
             this.btnCompras.TabIndex = 3;
             this.btnCompras.Text = "Compras";
-            this.btnCompras.UseVisualStyleBackColor = true;
+            this.btnCompras.UseVisualStyleBackColor = false;
             this.btnCompras.Click += new System.EventHandler(this.btnCompras_Click);
             // 
             // btnVendas
             // 
-            this.btnVendas.Location = new System.Drawing.Point(138, 102);
+            this.btnVendas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnVendas.FlatAppearance.BorderSize = 0;
+            this.btnVendas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnVendas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVendas.Location = new System.Drawing.Point(381, 135);
             this.btnVendas.Name = "btnVendas";
             this.btnVendas.Size = new System.Drawing.Size(112, 43);
             this.btnVendas.TabIndex = 4;
             this.btnVendas.Text = "Vendas";
-            this.btnVendas.UseVisualStyleBackColor = true;
+            this.btnVendas.UseVisualStyleBackColor = false;
+            this.btnVendas.Click += new System.EventHandler(this.btnVendas_Click);
             // 
             // btnInventario
             // 
-            this.btnInventario.Location = new System.Drawing.Point(406, 107);
+            this.btnInventario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnInventario.FlatAppearance.BorderSize = 0;
+            this.btnInventario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInventario.Location = new System.Drawing.Point(626, 135);
             this.btnInventario.Name = "btnInventario";
-            this.btnInventario.Size = new System.Drawing.Size(100, 43);
+            this.btnInventario.Size = new System.Drawing.Size(113, 43);
             this.btnInventario.TabIndex = 5;
             this.btnInventario.Text = "Inventario";
-            this.btnInventario.UseVisualStyleBackColor = true;
+            this.btnInventario.UseVisualStyleBackColor = false;
             this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
-            // 
-            // btnProdutos
-            // 
-            this.btnProdutos.Location = new System.Drawing.Point(406, 192);
-            this.btnProdutos.Name = "btnProdutos";
-            this.btnProdutos.Size = new System.Drawing.Size(104, 52);
-            this.btnProdutos.TabIndex = 6;
-            this.btnProdutos.Text = "Produtos";
-            this.btnProdutos.UseVisualStyleBackColor = true;
-            // 
-            // btnLocais
-            // 
-            this.btnLocais.Location = new System.Drawing.Point(138, 201);
-            this.btnLocais.Name = "btnLocais";
-            this.btnLocais.Size = new System.Drawing.Size(112, 43);
-            this.btnLocais.TabIndex = 8;
-            this.btnLocais.Text = "Locais";
-            this.btnLocais.UseVisualStyleBackColor = true;
             // 
             // lblFundoMenu
             // 
@@ -144,87 +148,46 @@
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(23, 67);
+            this.label3.Location = new System.Drawing.Point(256, 72);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(736, 305);
+            this.label3.Size = new System.Drawing.Size(512, 288);
             this.label3.TabIndex = 10;
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.DarkGray;
-            this.label4.Location = new System.Drawing.Point(38, 89);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(226, 73);
-            this.label4.TabIndex = 11;
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.DarkGray;
-            this.label5.Location = new System.Drawing.Point(38, 180);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(226, 73);
-            this.label5.TabIndex = 12;
             // 
             // label6
             // 
-            this.label6.BackColor = System.Drawing.Color.DarkGray;
-            this.label6.Location = new System.Drawing.Point(38, 275);
+            this.label6.BackColor = System.Drawing.Color.Gainsboro;
+            this.label6.Location = new System.Drawing.Point(271, 232);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(226, 73);
+            this.label6.Size = new System.Drawing.Size(233, 100);
             this.label6.TabIndex = 13;
-            // 
-            // label7
-            // 
-            this.label7.BackColor = System.Drawing.Color.DarkGray;
-            this.label7.Location = new System.Drawing.Point(295, 89);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(226, 73);
-            this.label7.TabIndex = 14;
-            // 
-            // label8
-            // 
-            this.label8.BackColor = System.Drawing.Color.DarkGray;
-            this.label8.Location = new System.Drawing.Point(295, 180);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(226, 73);
-            this.label8.TabIndex = 15;
-            // 
-            // label9
-            // 
-            this.label9.BackColor = System.Drawing.Color.DarkGray;
-            this.label9.Location = new System.Drawing.Point(295, 275);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(226, 73);
-            this.label9.TabIndex = 16;
             // 
             // lblData
             // 
             this.lblData.BackColor = System.Drawing.Color.White;
-            this.lblData.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblData.Location = new System.Drawing.Point(562, 273);
+            this.lblData.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblData.Location = new System.Drawing.Point(9, 106);
             this.lblData.Name = "lblData";
-            this.lblData.Size = new System.Drawing.Size(158, 67);
+            this.lblData.Size = new System.Drawing.Size(214, 68);
             this.lblData.TabIndex = 17;
-            this.lblData.Text = "Data";
             this.lblData.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pbInicio
             // 
             this.pbInicio.BackColor = System.Drawing.Color.White;
-            this.pbInicio.Image = global::wfaGestaoEstoque.Properties.Resources.logo;
-            this.pbInicio.Location = new System.Drawing.Point(554, 102);
+            this.pbInicio.Image = global::wfaGestaoEstoque.Properties.Resources.Screenshot__1;
+            this.pbInicio.Location = new System.Drawing.Point(12, 12);
             this.pbInicio.Name = "pbInicio";
-            this.pbInicio.Size = new System.Drawing.Size(176, 142);
+            this.pbInicio.Size = new System.Drawing.Size(211, 68);
             this.pbInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbInicio.TabIndex = 18;
             this.pbInicio.TabStop = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Silver;
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = global::wfaGestaoEstoque.Properties.Resources.sales_performance;
-            this.pictureBox1.Location = new System.Drawing.Point(50, 96);
+            this.pictureBox1.Location = new System.Drawing.Point(283, 121);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(69, 57);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -233,10 +196,10 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Silver;
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox2.Image = global::wfaGestaoEstoque.Properties.Resources._57451;
-            this.pictureBox2.Location = new System.Drawing.Point(50, 283);
+            this.pictureBox2.Location = new System.Drawing.Point(283, 259);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(69, 57);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -245,13 +208,77 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(525, 10);
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Location = new System.Drawing.Point(23, 302);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(104, 41);
+            this.btnLogout.Size = new System.Drawing.Size(186, 26);
             this.btnLogout.TabIndex = 21;
-            this.btnLogout.Text = "Logout";
-            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Text = "Trocar de usuário";
+            this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Silver;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox3.Image = global::wfaGestaoEstoque.Properties.Resources.kisspng_art_computer_icons_download_inventory_icon_5b10f7829139e6_1002917915278385945949;
+            this.pictureBox3.Location = new System.Drawing.Point(536, 121);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(69, 57);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 22;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.White;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox6.Image = global::wfaGestaoEstoque.Properties.Resources.icone_cadastro_png_4;
+            this.pictureBox6.Location = new System.Drawing.Point(536, 259);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(69, 57);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 25;
+            this.pictureBox6.TabStop = false;
+            // 
+            // lblBarra
+            // 
+            this.lblBarra.BackColor = System.Drawing.Color.White;
+            this.lblBarra.Location = new System.Drawing.Point(0, 0);
+            this.lblBarra.Name = "lblBarra";
+            this.lblBarra.Size = new System.Drawing.Size(239, 389);
+            this.lblBarra.TabIndex = 26;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Gainsboro;
+            this.label2.Location = new System.Drawing.Point(271, 106);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(233, 100);
+            this.label2.TabIndex = 27;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.Gainsboro;
+            this.label4.Location = new System.Drawing.Point(519, 106);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(233, 100);
+            this.label4.TabIndex = 28;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.Gainsboro;
+            this.label5.Location = new System.Drawing.Point(519, 232);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(233, 100);
+            this.label5.TabIndex = 29;
             // 
             // frmIncio
             // 
@@ -259,25 +286,24 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::wfaGestaoEstoque.Properties.Resources._818643_amazing_bakery_wallpapers_1920x1200_picture;
             this.ClientSize = new System.Drawing.Size(780, 380);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pbInicio);
             this.Controls.Add(this.lblData);
-            this.Controls.Add(this.btnLocais);
-            this.Controls.Add(this.btnProdutos);
             this.Controls.Add(this.btnInventario);
             this.Controls.Add(this.btnVendas);
             this.Controls.Add(this.btnCompras);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnCad);
             this.Controls.Add(this.lblSelecione);
+            this.Controls.Add(this.lblBarra);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblFundoMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -286,10 +312,13 @@
             this.Name = "frmIncio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmIncio_FormClosing);
             this.Load += new System.EventHandler(this.frmIncio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbInicio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -303,21 +332,21 @@
         private System.Windows.Forms.Button btnCompras;
         private System.Windows.Forms.Button btnVendas;
         private System.Windows.Forms.Button btnInventario;
-        private System.Windows.Forms.Button btnProdutos;
-        private System.Windows.Forms.Button btnLocais;
         private System.Windows.Forms.Label lblFundoMenu;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblData;
         private System.Windows.Forms.PictureBox pbInicio;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label lblBarra;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
 

@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadConsum));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.mskCPF = new System.Windows.Forms.MaskedTextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.btnInicio = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -94,39 +94,32 @@
             this.mskCPF.Size = new System.Drawing.Size(100, 20);
             this.mskCPF.TabIndex = 6;
             // 
-            // label4
+            // btnInicio
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(71, 243);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "label4";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(71, 274);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "label5";
+            this.btnInicio.Location = new System.Drawing.Point(316, 101);
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.Size = new System.Drawing.Size(86, 47);
+            this.btnInicio.TabIndex = 9;
+            this.btnInicio.Text = "Inicio";
+            this.btnInicio.UseVisualStyleBackColor = true;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
             // frmCadConsum
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(429, 335);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.btnInicio);
             this.Controls.Add(this.mskCPF);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCadConsum";
-            this.Text = "frmCadConsum";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Cadastro de consumidor";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,7 +133,6 @@
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.MaskedTextBox mskCPF;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnInicio;
     }
 }

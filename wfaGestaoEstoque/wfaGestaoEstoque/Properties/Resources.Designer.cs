@@ -63,6 +63,16 @@ namespace wfaGestaoEstoque.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1492790962_53location_84191 {
+            get {
+                object obj = ResourceManager.GetObject("1492790962-53location_84191", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _57451 {
             get {
                 object obj = ResourceManager.GetObject("57451", resourceCulture);
@@ -83,6 +93,27 @@ namespace wfaGestaoEstoque.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icone_cadastro_png_4 {
+            get {
+                object obj = ResourceManager.GetObject("icone-cadastro-png-4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kisspng_art_computer_icons_download_inventory_icon_5b10f7829139e6_1002917915278385945949 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-art-computer-icons-download-inventory-icon-5b10f7829139e6.100291791527838" +
+                        "5945949", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo {
             get {
                 object obj = ResourceManager.GetObject("logo", resourceCulture);
@@ -96,6 +127,26 @@ namespace wfaGestaoEstoque.Properties {
         internal static System.Drawing.Bitmap sales_performance {
             get {
                 object obj = ResourceManager.GetObject("sales-performance", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot__1 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot_-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Screenshot_4 {
+            get {
+                object obj = ResourceManager.GetObject("Screenshot_4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

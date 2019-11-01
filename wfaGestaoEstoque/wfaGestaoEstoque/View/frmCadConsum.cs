@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using wfaGestaoEstoque.View;
 
 namespace wfaGestaoEstoque.View
 {
@@ -34,12 +35,7 @@ namespace wfaGestaoEstoque.View
                 }
                 else //caso todos os campos estejam preenchidos corretamente
                 {
-                    FCCconsumidor.CONvalidaNome(txtNome.Text);
-
-                    label4.Text = FCCconsumidor.CONcpf;
-                    label5.Text = FCCconsumidor.CONnome;
-
-                    
+                    FCCconsumidor.CONvalidaNome(txtNome.Text);                    
                 }
             }
         }
@@ -50,6 +46,14 @@ namespace wfaGestaoEstoque.View
             {                
                 e.KeyChar = (Char)0;
             }
+        }
+
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var inicio = new frmIncio();
+            inicio.Closed += (s, args) => this.Close();
+            inicio.Show();
         }
     }
 }

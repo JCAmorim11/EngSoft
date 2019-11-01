@@ -68,6 +68,12 @@
     <Compile Include="Controller\Consumidor.cs" />
     <Compile Include="Controller\Venda.cs" />
     <Compile Include="Model\Conexao.cs" />
+    <Compile Include="View\frmCadastros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmCadastros.Designer.cs">
+      <DependentUpon>frmCadastros.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmCadConsum.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,9 @@
     <Compile Include="View\frmVendas.Designer.cs">
       <DependentUpon>frmVendas.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\frmCadastros.resx">
+      <DependentUpon>frmCadastros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmCadConsum.resx">
       <DependentUpon>frmCadConsum.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmVendas.resx">
+      <DependentUpon>frmVendas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -194,6 +206,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sales-performance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-art-computer-icons-download-inventory-icon-5b10f7829139e6.1002917915278385945949.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone-cadastro-png-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1492790962-53location_84191.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot_-1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
