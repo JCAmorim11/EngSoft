@@ -32,6 +32,8 @@ namespace wfaGestaoEstoque.View
             {
                 e.Cancel = true;
             }
+            else
+                Environment.Exit(0);
         }
     }
 }

@@ -37,5 +37,15 @@ namespace wfaGestaoEstoque.View
             lblFundo.BackColor = mycolor;
             lblMenu.BackColor = mycolor;
         }
+
+        private void frmInventario_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Deseja mesmo sair?", "ATENÇÃO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+                Environment.Exit(0);
+        }
     }
 }

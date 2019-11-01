@@ -32,8 +32,9 @@ namespace wfaGestaoEstoque.View
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            if (txtNome.Text == "admin" && txtSenha.Text == "admin")
+            if (txtNome.Text == "admin" && txtSenha.Text == "admin" )
             {
+                Program.globalString = txtNome.Text;
                 this.Hide();
                 var inicio = new frmIncio();
                 inicio.Closed += (s, args) => this.Close();
@@ -42,6 +43,9 @@ namespace wfaGestaoEstoque.View
             else
             {
                 lblErro.Visible = true;
+                txtNome.Text = "";
+                txtSenha.Text = "";
+                txtNome.Focus();
             }
         }
 
@@ -51,6 +55,8 @@ namespace wfaGestaoEstoque.View
             {
                 e.Cancel = true;
             }
+            else
+                Environment.Exit(0);
         }
     }
 }

@@ -76,5 +76,15 @@ namespace wfaGestaoEstoque.View
             mskCPF.Text = "";
             txtNome.Focus();
         }
+
+        private void frmCadConsum_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Deseja mesmo sair?", "ATENÇÃO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+                Environment.Exit(0);
+        }
     }
 }

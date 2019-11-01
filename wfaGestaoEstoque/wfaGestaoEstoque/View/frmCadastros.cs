@@ -49,5 +49,24 @@ namespace wfaGestaoEstoque.View
             menu.Closed += (s, args) => this.Close();
             menu.Show();
         }
+
+        private void frmCadastros_Load(object sender, EventArgs e)
+        {
+            Color mycolor = Color.FromArgb(130, Color.WhiteSmoke);
+            btnConsumidores.BackColor = mycolor;
+            btnFornecedores.BackColor = mycolor;
+            btnProdutos.BackColor = mycolor;
+            btnVoltar.BackColor = mycolor;
+        }
+
+        private void frmCadastros_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Deseja mesmo sair?", "ATENÇÃO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+                Environment.Exit(0);
+        }
     }
 }

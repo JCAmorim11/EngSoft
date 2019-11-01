@@ -65,7 +65,7 @@ namespace wfaGestaoEstoque
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            string userName = Environment.UserName;
+            string userName = Program.globalString;
             lblData.Text = "Olá, " + userName + " seja bem vindo(a)! Hoje é " + DateTime.Now.Date.ToString("dddd , dd MMM yyyy, ") + "são "
                 + DateTime.Now.ToString("HH:mm:ss tt");
         }
@@ -84,6 +84,8 @@ namespace wfaGestaoEstoque
             {
                 e.Cancel = true;
             }
+            else
+                Environment.Exit(0);
         }
     }
 }

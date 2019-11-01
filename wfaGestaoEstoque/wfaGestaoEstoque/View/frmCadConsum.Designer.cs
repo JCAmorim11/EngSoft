@@ -182,6 +182,7 @@
             this.Name = "frmCadConsum";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de consumidor";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmCadConsum_FormClosing);
             this.Load += new System.EventHandler(this.frmCadConsum_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

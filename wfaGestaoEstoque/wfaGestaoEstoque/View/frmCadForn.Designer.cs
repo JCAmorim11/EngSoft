@@ -300,6 +300,7 @@
             this.Name = "frmCadForn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de fornecedor";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmCadForn_FormClosing);
             this.Load += new System.EventHandler(this.frmCadForn_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

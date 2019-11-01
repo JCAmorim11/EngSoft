@@ -9,6 +9,7 @@ namespace wfaGestaoEstoque
 {
     static class Program
     {
+        public static string globalString = "This is a global string.";
         /// <summary>
         /// Ponto de entrada principal para o aplicativo.
         /// </summary>
