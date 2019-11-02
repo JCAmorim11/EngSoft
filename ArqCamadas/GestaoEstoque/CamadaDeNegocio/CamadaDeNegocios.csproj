@@ -42,7 +42,7 @@
   <ItemGroup>
     <Compile Include="Compra.cs" />
     <Compile Include="Consumidor.cs" />
-    <Compile Include="Consumo.cs" />
+    <Compile Include="Consumir.cs" />
     <Compile Include="Fornecedor.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="Produto.cs" />

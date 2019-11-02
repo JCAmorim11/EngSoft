@@ -165,7 +165,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(429, 268);
+            this.ClientSize = new System.Drawing.Size(469, 340);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.lblSucesso);
             this.Controls.Add(this.btnInicio);

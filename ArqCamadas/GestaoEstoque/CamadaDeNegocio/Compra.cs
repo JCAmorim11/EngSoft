@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CamadaDeNegocios
 {
-    class Compra
+    public class Compra
     {
         #region ATRIBUTOS
         public double COMpreço { get; private set; }
@@ -58,6 +58,14 @@ namespace CamadaDeNegocios
         {
             return true;
         }
+
+        #region INJEÇÃO
+        public bool COMinjetar(CamadaDeNegocios.Compra comprar)
+        {
+            return true;
+        }
+        #endregion
+
         #endregion MÉTODOS
 
     }

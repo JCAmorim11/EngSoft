@@ -11,7 +11,7 @@ namespace CamadaDeNegocios
     /// </summary>
 
     #region Classe Login
-    class Login
+    public class Login
     {
         #region ATRIBUTOS
         public string User { get; private set; }
@@ -30,6 +30,7 @@ namespace CamadaDeNegocios
         }
         #endregion
 
+        #region MÉTODOS
         public bool UserValido() {
             return true;
         }
@@ -37,6 +38,8 @@ namespace CamadaDeNegocios
         {
             return true;
         }
+        #endregion
+
     }
     #endregion
 }

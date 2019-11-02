@@ -11,7 +11,7 @@ namespace CamadaDeDados
 {
     public class Conexao
     {
-        OleDbConnection myBDConnection = new OleDbConnection();
+        OleDbConnection myBDConnection = new OleDbConnection(Properties.Settings.Default.padokaBDConnectionString);
 
         public void abrirConexao()
         {

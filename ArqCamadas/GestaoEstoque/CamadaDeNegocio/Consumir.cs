@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CamadaDeNegocio
 {
-    class Consumo
+    public class Consumir
     {
         #region ATRIBUTOS
         public string CONSid { get; private set; }
@@ -14,21 +14,27 @@ namespace CamadaDeNegocio
         #endregion ATRIBUTOS
 
         #region CONSTRUTORES
-        public Consumo()
+        public Consumir()
         {
             this.CONSid = "";
         }
-        public Consumo(string id)
+        public Consumir(string id)
         {
             CONSid = id;
         }
         #endregion CONSTRUTORES
 
         #region MÉTODOS
-        public int VENokok(int hue)
+        public int CONSokok(int hue)
         {
             return hue;
         }
+        #region INJEÇÃO
+         public bool CONSinjetar(Consumir compra)
+         {
+             return true;
+         }
+        #endregion
         #endregion MÉTODOS
     }
 }

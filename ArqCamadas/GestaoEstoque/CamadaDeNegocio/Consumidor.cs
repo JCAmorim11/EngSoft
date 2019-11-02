@@ -112,7 +112,14 @@ namespace CamadaDeNegocios
                 return false;
             return true;
         }
-       
+
+        #region INJEÇÃO
+        public bool CONinjetar(CamadaDeNegocios.Produto prod)
+        {
+            return true;
+        }
+        #endregion
+
         #endregion
     }
 }
