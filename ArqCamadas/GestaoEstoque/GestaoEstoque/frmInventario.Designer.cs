@@ -28,8 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInventario));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.iDProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prodNomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prodValorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDLoteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.produtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.padokaBDDataSetInventario = new GestaoEstoque.padokaBDDataSetInventario();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblNome = new System.Windows.Forms.Label();
@@ -38,26 +45,72 @@
             this.lblFundo = new System.Windows.Forms.Label();
             this.lblMenu = new System.Windows.Forms.Label();
             this.btnInicio = new System.Windows.Forms.Button();
-            this.btnSair = new System.Windows.Forms.Button();
+            this.produtoTableAdapter = new GestaoEstoque.padokaBDDataSetInventarioTableAdapters.ProdutoTableAdapter();
+            this.padokaBDDataSetInventario1 = new GestaoEstoque.padokaBDDataSetInventario();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.padokaBDDataSetInventario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.padokaBDDataSetInventario1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDProdutoDataGridViewTextBoxColumn,
+            this.prodNomeDataGridViewTextBoxColumn,
+            this.prodValorDataGridViewTextBoxColumn,
+            this.iDLoteDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.produtoBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(247, 89);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(541, 349);
+            this.dataGridView1.Size = new System.Drawing.Size(449, 349);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // iDProdutoDataGridViewTextBoxColumn
+            // 
+            this.iDProdutoDataGridViewTextBoxColumn.DataPropertyName = "ID_Produto";
+            this.iDProdutoDataGridViewTextBoxColumn.HeaderText = "ID_Produto";
+            this.iDProdutoDataGridViewTextBoxColumn.Name = "iDProdutoDataGridViewTextBoxColumn";
+            // 
+            // prodNomeDataGridViewTextBoxColumn
+            // 
+            this.prodNomeDataGridViewTextBoxColumn.DataPropertyName = "Prod_Nome";
+            this.prodNomeDataGridViewTextBoxColumn.HeaderText = "Prod_Nome";
+            this.prodNomeDataGridViewTextBoxColumn.Name = "prodNomeDataGridViewTextBoxColumn";
+            // 
+            // prodValorDataGridViewTextBoxColumn
+            // 
+            this.prodValorDataGridViewTextBoxColumn.DataPropertyName = "Prod_Valor";
+            this.prodValorDataGridViewTextBoxColumn.HeaderText = "Prod_Valor";
+            this.prodValorDataGridViewTextBoxColumn.Name = "prodValorDataGridViewTextBoxColumn";
+            // 
+            // iDLoteDataGridViewTextBoxColumn
+            // 
+            this.iDLoteDataGridViewTextBoxColumn.DataPropertyName = "ID_Lote";
+            this.iDLoteDataGridViewTextBoxColumn.HeaderText = "ID_Lote";
+            this.iDLoteDataGridViewTextBoxColumn.Name = "iDLoteDataGridViewTextBoxColumn";
+            // 
+            // produtoBindingSource
+            // 
+            this.produtoBindingSource.DataMember = "Produto";
+            this.produtoBindingSource.DataSource = this.padokaBDDataSetInventario;
+            // 
+            // padokaBDDataSetInventario
+            // 
+            this.padokaBDDataSetInventario.DataSetName = "padokaBDDataSetInventario";
+            this.padokaBDDataSetInventario.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(271, 35);
+            this.label1.Font = new System.Drawing.Font("Lucida Handwriting", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(245, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 25);
+            this.label1.Size = new System.Drawing.Size(151, 27);
             this.label1.TabIndex = 1;
             this.label1.Text = "Inventário";
             // 
@@ -105,14 +158,14 @@
             // 
             // lblMenu
             // 
-            this.lblMenu.Location = new System.Drawing.Point(263, 28);
+            this.lblMenu.Location = new System.Drawing.Point(244, 35);
             this.lblMenu.Name = "lblMenu";
-            this.lblMenu.Size = new System.Drawing.Size(508, 39);
+            this.lblMenu.Size = new System.Drawing.Size(445, 39);
             this.lblMenu.TabIndex = 7;
             // 
             // btnInicio
             // 
-            this.btnInicio.Location = new System.Drawing.Point(601, 35);
+            this.btnInicio.Location = new System.Drawing.Point(607, 42);
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Size = new System.Drawing.Size(75, 23);
             this.btnInicio.TabIndex = 8;
@@ -120,15 +173,14 @@
             this.btnInicio.UseVisualStyleBackColor = true;
             this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
-            // btnSair
+            // produtoTableAdapter
             // 
-            this.btnSair.Location = new System.Drawing.Point(691, 35);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(75, 23);
-            this.btnSair.TabIndex = 9;
-            this.btnSair.Text = "&Sair";
-            this.btnSair.UseVisualStyleBackColor = true;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            this.produtoTableAdapter.ClearBeforeFill = true;
+            // 
+            // padokaBDDataSetInventario1
+            // 
+            this.padokaBDDataSetInventario1.DataSetName = "padokaBDDataSetInventario";
+            this.padokaBDDataSetInventario1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // frmInventario
             // 
@@ -136,8 +188,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnSair);
+            this.ClientSize = new System.Drawing.Size(719, 450);
             this.Controls.Add(this.btnInicio);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
@@ -154,7 +205,10 @@
             this.Text = "Inventário";
             this.Load += new System.EventHandler(this.frmInventario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.padokaBDDataSetInventario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.padokaBDDataSetInventario1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,6 +225,13 @@
         private System.Windows.Forms.Label lblFundo;
         private System.Windows.Forms.Label lblMenu;
         private System.Windows.Forms.Button btnInicio;
-        private System.Windows.Forms.Button btnSair;
+        private padokaBDDataSetInventario padokaBDDataSetInventario;
+        private System.Windows.Forms.BindingSource produtoBindingSource;
+        private padokaBDDataSetInventarioTableAdapters.ProdutoTableAdapter produtoTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDProdutoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prodNomeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prodValorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDLoteDataGridViewTextBoxColumn;
+        private padokaBDDataSetInventario padokaBDDataSetInventario1;
     }
 }

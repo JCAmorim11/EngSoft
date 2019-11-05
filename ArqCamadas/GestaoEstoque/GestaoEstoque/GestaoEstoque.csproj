@@ -105,6 +105,11 @@
     <Compile Include="frmVendas.Designer.cs">
       <DependentUpon>frmVendas.cs</DependentUpon>
     </Compile>
+    <Compile Include="padokaBDDataSetInventario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>padokaBDDataSetInventario.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmCadastros.resx">
@@ -146,6 +151,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="padokaBDDataSetInventario.xsc">
+      <DependentUpon>padokaBDDataSetInventario.xsd</DependentUpon>
+    </None>
+    <None Include="padokaBDDataSetInventario.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>padokaBDDataSetInventario.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="padokaBDDataSetInventario.xss">
+      <DependentUpon>padokaBDDataSetInventario.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -28,6 +28,8 @@ namespace CamadaDeNegocios
 
         #region MÉTODOS
 
+        #region inserir
+
         public bool CONinsereCPF(string original)
         {//insere o cpf
             if (CONvalidaCPF(original))
@@ -48,7 +50,9 @@ namespace CamadaDeNegocios
             }
             return false;
         }
+        #endregion
 
+        #region validar
         public bool CONvalidaCPF(string cpf)
         {
             string tempCPF = cpf.Replace(",", "").Replace("-", "").Replace(".", "");
@@ -112,6 +116,7 @@ namespace CamadaDeNegocios
                 return false;
             return true;
         }
+        #endregion
 
         #region INJEÇÃO
         public bool CONinjetar(CamadaDeNegocios.Produto prod)

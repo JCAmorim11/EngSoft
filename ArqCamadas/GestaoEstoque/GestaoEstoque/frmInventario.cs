@@ -32,6 +32,8 @@ namespace GestaoEstoque
 
         private void frmInventario_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'padokaBDDataSetInventario.Produto'. Você pode movê-la ou removê-la conforme necessário.
+            this.produtoTableAdapter.Fill(this.padokaBDDataSetInventario.Produto);
             Color mycolor = Color.FromArgb(100, Color.DarkGray);
             lblFundo.BackColor = mycolor;
             lblMenu.BackColor = mycolor;
