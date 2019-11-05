@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GestaoEstoque
 {
-    public partial class frmCadastros : Form
+    public partial class frmCadastrosFunc : Form
     {
-        public frmCadastros()
+        public frmCadastrosFunc()
         {
             InitializeComponent();
         }

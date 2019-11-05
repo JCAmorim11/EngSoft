@@ -51,6 +51,18 @@
     <Compile Include="frmCadastros.Designer.cs">
       <DependentUpon>frmCadastros.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCadastrosFunc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastrosFunc.Designer.cs">
+      <DependentUpon>frmCadastrosFunc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadColab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadColab.Designer.cs">
+      <DependentUpon>frmCadColab.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCadConsum.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +99,12 @@
     <Compile Include="frmInicio.Designer.cs">
       <DependentUpon>frmInicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmInicioFunc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInicioFunc.Designer.cs">
+      <DependentUpon>frmInicioFunc.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmInventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +132,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmCadastros.resx">
       <DependentUpon>frmCadastros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastrosFunc.resx">
+      <DependentUpon>frmCadastrosFunc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadColab.resx">
+      <DependentUpon>frmCadColab.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCadConsum.resx">
       <DependentUpon>frmCadConsum.cs</DependentUpon>

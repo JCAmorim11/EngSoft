@@ -38,14 +38,48 @@ namespace CamadaDeNegocios
         #endregion
 
         #region MÉTODOS
-        public bool UserValido()
+        public bool UserValido(string user)
         {
+            if (user.Length < 3)
+                return false;
             return true;
         }
         public bool ValidarSenha()
         {
             return true;
         }
+        /*
+        public bool LOGvalidaLetraNome(char e) //verifica letra por letra do nome
+        {
+            if ((!Char.IsLetter(e) && e != (Char)8) && e != (Char)32)
+            {
+                return false;
+            }
+            else
+                return true;
+        }
+
+        public bool LOGvalidaNome(string nome) //verifica o nome inteiro a fim de evitar nomes em branco ou menores de 3 caracteres
+        {
+            string tempNome = nome.Trim();
+            if (tempNome.Length < 3)
+                return false;
+            return true;
+        }
+
+        public bool LOGvalidaUser(string user)
+        {
+            if (user.Length < 3)
+                return false;
+            return true;
+        }
+
+        public bool LOGvalidaLetraUser(char e)
+        {
+            if (!Char.IsLetter(e) || Char.IsPunctuation(e))
+                return false;
+            return true;
+        }*/
         #endregion
 
         private DataSet obtemUsuario(string usuario, string senha)
@@ -60,27 +94,27 @@ namespace CamadaDeNegocios
         {
 
             Conexao acessoDados = new Conexao();
-            return acessoDados.RetornaDataSet("SELECT usuario FROM Login WHERE Login_username = '" + usuario + "'");
+            return acessoDados.RetornaDataSet("SELECT Login_username FROM Login WHERE Login_username = '" + usuario + "'");
 
         }
 
-        public bool cadastraUsuario(string name, string RG, string CPF, string telefone, string usuario, string senha)
+        public bool cadastraUsuario(string name, string CPF, string usuario, string senha, string nivel)
         {
             DataSet aux = new DataSet();
             aux = this.verificaUsuario(usuario);
             if (aux.Tables[0].Rows.Count == 0)
             {
                 Conexao acessoDados2 = new Conexao();
-                acessoDados2.ExecutaNQ("insert into Tecnico(nome,RG,CPF,telefone,usuario,senha) values('" + name + "','" + RG + "','" + CPF + "','" + telefone + "','" + usuario + "','" + senha + "')");
+                acessoDados2.ExecutaNQ("insert into Login(Login_username,Login_senha,Login_nome,Login_cpf,Login_nivel) values('" + usuario + "','" + senha + "','" + name + "','" + CPF + "','" + nivel + "')");
                 return true;
             }
             else return false;
 
         }
 
-        public bool Cadastrar(string name, string RG, string CPF, string telefone, string usuario, string senha)
+        public bool Cadastrar(string name, string CPF, string usuario, string senha, string nivel)
         {
-            cadastraUsuario(name, RG, CPF, telefone, usuario, senha);
+            cadastraUsuario(name, CPF, usuario, senha, nivel);
             return true;
         }
 
@@ -95,17 +129,13 @@ namespace CamadaDeNegocios
 
             if (aux.Tables[0].Rows.Count > 0)
             {
-
-
-
-                string usuariobanco = oDa.Rows[0]["usuario"].ToString();
-                string senhabanco = oDa.Rows[0]["senha"].ToString();
-                if (oDa.Rows[0]["usuario"].ToString() == usuario && oDa.Rows[0]["senha"].ToString() == senha)
+                string usuariobanco = oDa.Rows[0]["Login_username"].ToString();
+                string senhabanco = oDa.Rows[0]["Login_senha"].ToString();
+                if (oDa.Rows[0]["Login_username"].ToString() == usuario && oDa.Rows[0]["Login_senha"].ToString() == senha)
                 {
-                    user.user = oDa.Rows[0]["usuario"].ToString();
-                    user.nivel = oDa.Rows[0]["nivel"].ToString();
-                    user.nome = oDa.Rows[0]["nome"].ToString();
-                    //user.id = oDa.Rows[0]["id_tecnicos"].ToString();
+                    user.user = oDa.Rows[0]["Login_username"].ToString();
+                    user.nivel = oDa.Rows[0]["Login_nivel"].ToString();
+                    user.nome = oDa.Rows[0]["Login_nome"].ToString();
                     return user;
                 }
                 else
@@ -116,23 +146,6 @@ namespace CamadaDeNegocios
             else return null;
 
         }
-
-        public string RecuperaNomeTecnico(int idTecnico)
-        {
-            try
-            {
-                Conexao camadaDados = new Conexao();
-                string sql = "SELECT nome FROM Tecnico WHERE id_Tecnicos = " + idTecnico;
-                return camadaDados.RetornaDataSet(sql).Tables[0].Rows[0][0].ToString();
-            }
-            catch (Exception)
-            {
-                return "Tecnico não encontrado";
-                throw;
-            }
-
-        }
-        //aaaaaaaaaaa
     }
     #endregion
 }

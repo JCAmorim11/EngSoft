@@ -1,6 +1,6 @@
 ﻿namespace GestaoEstoque
 {
-    partial class frmCadastros
+    partial class frmCadastrosFunc
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastros));
             this.btnConsumidores = new System.Windows.Forms.Button();
             this.btnFornecedores = new System.Windows.Forms.Button();
             this.btnProdutos = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
-            this.btnColab = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnConsumidores
@@ -76,7 +74,7 @@
             // 
             this.btnVoltar.BackColor = System.Drawing.Color.White;
             this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVoltar.Location = new System.Drawing.Point(8, 240);
+            this.btnVoltar.Location = new System.Drawing.Point(8, 183);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(233, 51);
             this.btnVoltar.TabIndex = 3;
@@ -84,26 +82,12 @@
             this.btnVoltar.UseVisualStyleBackColor = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
-            // btnColab
-            // 
-            this.btnColab.BackColor = System.Drawing.Color.White;
-            this.btnColab.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnColab.Location = new System.Drawing.Point(8, 183);
-            this.btnColab.Name = "btnColab";
-            this.btnColab.Size = new System.Drawing.Size(233, 51);
-            this.btnColab.TabIndex = 4;
-            this.btnColab.Text = "C&olaboradores";
-            this.btnColab.UseVisualStyleBackColor = false;
-            this.btnColab.Click += new System.EventHandler(this.btnColab_Click);
-            // 
-            // frmCadastros
+            // frmCadastrosFunc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(247, 314);
-            this.Controls.Add(this.btnColab);
+            this.ClientSize = new System.Drawing.Size(247, 244);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnProdutos);
             this.Controls.Add(this.btnFornecedores);
@@ -111,7 +95,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmCadastros";
+            this.Name = "frmCadastrosFunc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastros";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmCadastros_FormClosing);
@@ -126,6 +110,5 @@
         private System.Windows.Forms.Button btnFornecedores;
         private System.Windows.Forms.Button btnProdutos;
         private System.Windows.Forms.Button btnVoltar;
-        private System.Windows.Forms.Button btnColab;
     }
 }
