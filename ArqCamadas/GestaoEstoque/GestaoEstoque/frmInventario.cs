@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CamadaDeNegocios;
 
 namespace GestaoEstoque
 {
@@ -16,7 +17,7 @@ namespace GestaoEstoque
         {
             InitializeComponent();
         }
-
+        Produto consulta = new Produto();
         private void btnInicio_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -33,10 +34,13 @@ namespace GestaoEstoque
         private void frmInventario_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'padokaBDDataSetInventario.Produto'. Você pode movê-la ou removê-la conforme necessário.
-            this.produtoTableAdapter.Fill(this.padokaBDDataSetInventario.Produto);
+            //this.produtoTableAdapter.Fill(this.padokaBDDataSetInventario.Produto);
             Color mycolor = Color.FromArgb(100, Color.DarkGray);
             lblFundo.BackColor = mycolor;
-            lblMenu.BackColor = mycolor;
+
+            DataSet oDx = new DataSet();
+            oDx = consulta.selecionaProd();
+            dataGridView1.DataSource = oDx.Tables[0];
         }
     }
 }

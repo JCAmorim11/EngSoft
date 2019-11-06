@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CamadaDeNegocios;
 
 namespace GestaoEstoque
 {
@@ -34,8 +35,17 @@ namespace GestaoEstoque
                 }
                 else //caso todos os campos estejam preenchidos corretamente
                 {
-                    FCCconsumidor.CONvalidaNome(txtNome.Text);
-                    lblSucesso.Visible = true;
+                    string name, CPF;
+                    name = txtNome.Text;
+                    CPF = mskCPF.Text.Replace(".", "").Replace("-", "").Replace(",", "").Replace("/", ""); ;
+
+                    Consumidor NovoUsuario = new Consumidor();
+                    if (NovoUsuario.CONcadastraConsum(name, CPF))
+                        MessageBox.Show("Cadastro realizado!");
+                    else
+                        MessageBox.Show("puts amigah");
+                    //FCCconsumidor.CONvalidaNome(txtNome.Text);
+                    //lblSucesso.Visible = true;
                 }
             }
         }

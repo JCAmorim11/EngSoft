@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using CamadaDeDados;
 
 namespace CamadaDeNegocios
 { 
@@ -126,5 +128,26 @@ namespace CamadaDeNegocios
         #endregion
 
         #endregion
+
+        private DataSet CONverificaConsum(string usuario)
+        {
+
+            Conexao acessoDados = new Conexao();
+            return acessoDados.RetornaDataSet("SELECT Login_username FROM Login WHERE Login_username = '" + usuario + "'");
+
+        }
+        public bool CONcadastraConsum(string name, string cpf)
+        {
+            DataSet aux = new DataSet();
+            aux = this.CONverificaConsum(name);
+            if (aux.Tables[0].Rows.Count == 0)
+            {
+                Conexao acessoDados2 = new Conexao();
+                acessoDados2.ExecutaNQ("insert into Consumidor(ID_CPF,Cons_Nome) values('" + cpf + "','" + name + "')");
+                return true;
+            }
+            else return false;
+
+        }
     }
 }

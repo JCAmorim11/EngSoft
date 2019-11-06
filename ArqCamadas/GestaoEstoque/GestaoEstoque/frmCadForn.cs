@@ -72,7 +72,7 @@ namespace GestaoEstoque
                     MessageBox.Show("Nome invalido!");
                     txtNome.Focus();
                 }
-                else if (!dante.FORinsereCNPJ(mskCNPJ.Text)) {
+                else if (!dante.FORvalidaCNPJ(mskCNPJ.Text)) {
                     MessageBox.Show("CNPJ invalido!");
                     mskCNPJ.Focus();
                 }
@@ -81,7 +81,7 @@ namespace GestaoEstoque
                     MessageBox.Show("CEP invalido");
                     mskCEP.Focus();
                 }
-                else if (!dante.FORinsereNacio(txtNacionalidade.Text)) {
+                else if (!dante.FORvalidaNacio(txtNacionalidade.Text)) {
                     MessageBox.Show("Nacionalidade invalido!");
                     txtNacionalidade.Focus();
                 }
@@ -99,7 +99,22 @@ namespace GestaoEstoque
                 }
                 else
                 {
-                    MessageBox.Show("Novo fornecedor inserido!!");
+                    string name, cnpj, nac, cep, rua, log, cpl;
+                    int num;
+                    name = txtNome.Text;
+                    cnpj = mskCNPJ.Text.Replace(".","").Replace("-", "").Replace(",", "").Replace("/", "");
+                    nac = txtNacionalidade.Text;
+                    cep = mskCEP.Text;
+                    rua = txtRua.Text;
+                    log = txtLogradouro.Text;
+                    num = int.Parse(txtNumero.Text);
+                    cpl = txtComplemento.Text;
+
+                    Fornecedor NovoUsuario = new Fornecedor();
+                    if (NovoUsuario.FORcadastraForn(name, cnpj, nac, cep, rua, log, num, cpl))
+                        MessageBox.Show("Cadastro realizado!");
+                    else
+                        MessageBox.Show("puts amigah");
                 }
             }
 

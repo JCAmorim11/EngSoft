@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using CamadaDeDados;
 
 namespace CamadaDeNegocios
 {
@@ -112,12 +114,81 @@ namespace CamadaDeNegocios
             FORcomp = comp;
             return true;
         }
-        #endregion
-
-        #region validar
-        public bool FORvalidaCNPJ(string cnpj)
+        private DataSet FORverificaForn(string usuario)
         {
-            int val = 0, k = 5, c = 0;
+
+            Conexao acessoDados = new Conexao();
+            return acessoDados.RetornaDataSet("SELECT Login_username FROM Login WHERE Login_username = '" + usuario + "'");
+
+        }
+        public bool FORcadastraForn(string name, string cnpj, string nac, string cep, string rua, string log, int num, string cpl)
+        {
+            DataSet aux = new DataSet();
+            aux = this.FORverificaForn(name);
+            if (aux.Tables[0].Rows.Count == 0)
+            {
+                Conexao acessoDados2 = new Conexao();
+                acessoDados2.ExecutaNQ("insert into Fornecedor(Forn_cnpj,Forn_nome,Forn_nac,Forn_cep,Forn_log," +
+                    "Forn_rua,Forn_nro,Forn_cpl) values('" + cnpj + "','" + name + "','" + nac + "','" + cep + "','" + log + "','" + rua + "', '" + num + "', '" + cpl + "')");
+                return true;
+            }
+            else return false;
+
+        }
+#endregion
+
+#region validar
+public bool FORvalidaCNPJ(string cnpj)
+        {
+            string tempCNPJ = cnpj.Replace(",", "").Replace("-", "").Replace(".", "").Replace("/", "");
+
+            if (tempCNPJ.Length != 14)
+                return false;
+
+            int A = int.Parse(tempCNPJ.Substring(0, 1)) * 5;
+            int B = int.Parse(tempCNPJ.Substring(1, 1)) * 4;
+            int C = int.Parse(tempCNPJ.Substring(2, 1)) * 3;
+            int D = int.Parse(tempCNPJ.Substring(3, 1)) * 2;
+            int E = int.Parse(tempCNPJ.Substring(4, 1)) * 9;
+            int F = int.Parse(tempCNPJ.Substring(5, 1)) * 8;
+            int G = int.Parse(tempCNPJ.Substring(6, 1)) * 7;
+            int H = int.Parse(tempCNPJ.Substring(7, 1)) * 6;
+            int I = int.Parse(tempCNPJ.Substring(8, 1)) * 5;
+            int J = int.Parse(tempCNPJ.Substring(9, 1)) * 4;
+            int K = int.Parse(tempCNPJ.Substring(10, 1)) * 3;
+            int L = int.Parse(tempCNPJ.Substring(11, 1)) * 2;
+            int M = int.Parse(tempCNPJ.Substring(12, 1));
+            int N = int.Parse(tempCNPJ.Substring(13, 1));
+
+            int soma = A + B + C + D + E + F + G + H + I + J + K + L;
+            int resto = soma % 11;
+
+            if ((resto < 2 && M == 0) || 11 - resto == M)
+            {
+                A = int.Parse(tempCNPJ.Substring(0, 1)) * 6;
+                B = int.Parse(tempCNPJ.Substring(1, 1)) * 5;
+                C = int.Parse(tempCNPJ.Substring(2, 1)) * 4;
+                D = int.Parse(tempCNPJ.Substring(3, 1)) * 3;
+                E = int.Parse(tempCNPJ.Substring(4, 1)) * 2;
+                F = int.Parse(tempCNPJ.Substring(5, 1)) * 9;
+                G = int.Parse(tempCNPJ.Substring(6, 1)) * 8;
+                H = int.Parse(tempCNPJ.Substring(7, 1)) * 7;
+                I = int.Parse(tempCNPJ.Substring(8, 1)) * 6;
+                J = int.Parse(tempCNPJ.Substring(9, 1)) * 5;
+                K = int.Parse(tempCNPJ.Substring(10, 1)) * 4;
+                L = int.Parse(tempCNPJ.Substring(11, 1)) * 3;
+                M *= 2;
+
+                soma = A + B + C + D + E + F + G + H + I + J + K + L + M;
+                resto = soma % 11;
+                if ((resto < 2 && N == 0) || 11 - resto == N)
+                    return true;
+                else
+                    return false;
+            }
+            else
+                return false;
+            /*int val = 0, k = 5, c = 0;
             for (int i = 12; i != 0; i--)
             {
                 if (k < 2) k = 9;
@@ -153,7 +224,7 @@ namespace CamadaDeNegocios
                 if (11 - (val % 11) == int.Parse(cnpj.Substring(c, cnpj.Length - 13))) return true;
                 return false;
             }
-            return false;
+            return false;*/
         }
         public bool FORvalidaNome(string nome)
         {

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using CamadaDeDados;
 
 namespace CamadaDeNegocios
 {
@@ -53,5 +55,10 @@ namespace CamadaDeNegocios
 
         #endregion
 
+        public DataSet selecionaProd()
+        {
+            Conexao AcessoDados = new Conexao();
+            return AcessoDados.RetornaDataSet("Select * from Produto");
+        }
     }
 }
