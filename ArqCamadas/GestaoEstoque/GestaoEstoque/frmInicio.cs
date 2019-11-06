@@ -48,10 +48,11 @@ namespace GestaoEstoque
 
         private void btnCompras_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            /*this.Hide();
             var compras = new frmCompras();
             compras.Closed += (s, args) => this.Close();
-            compras.Show();
+            compras.Show();*/
+            MessageBox.Show("Em construção!!!", "Atenção");
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
