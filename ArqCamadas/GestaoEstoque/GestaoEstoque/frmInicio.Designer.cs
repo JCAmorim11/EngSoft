@@ -62,10 +62,10 @@
             // 
             this.lblSelecione.AutoSize = true;
             this.lblSelecione.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblSelecione.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelecione.Location = new System.Drawing.Point(363, 9);
+            this.lblSelecione.Font = new System.Drawing.Font("Lucida Sans", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSelecione.Location = new System.Drawing.Point(360, 22);
             this.lblSelecione.Name = "lblSelecione";
-            this.lblSelecione.Size = new System.Drawing.Size(323, 39);
+            this.lblSelecione.Size = new System.Drawing.Size(321, 39);
             this.lblSelecione.TabIndex = 0;
             this.lblSelecione.Text = "MENU PRINCIPAL";
             // 
@@ -165,7 +165,7 @@
             // 
             this.lblData.BackColor = System.Drawing.Color.White;
             this.lblData.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblData.Location = new System.Drawing.Point(9, 106);
+            this.lblData.Location = new System.Drawing.Point(9, 122);
             this.lblData.Name = "lblData";
             this.lblData.Size = new System.Drawing.Size(214, 68);
             this.lblData.TabIndex = 17;
@@ -286,7 +286,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(780, 380);
+            this.ClientSize = new System.Drawing.Size(780, 371);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btnLogout);

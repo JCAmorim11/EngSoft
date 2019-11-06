@@ -27,10 +27,11 @@ namespace GestaoEstoque
 
         private void btnFornecedores_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            MessageBox.Show("Em construção!!!", "Atenção");
+            /* this.Hide();
             var forn = new frmCadForn();
             forn.Closed += (s, args) => this.Close();
-            forn.Show();
+            forn.Show(); */
         }
 
         private void btnProdutos_Click(object sender, EventArgs e)
