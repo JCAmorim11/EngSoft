@@ -123,6 +123,11 @@
     <Compile Include="frmVendas.Designer.cs">
       <DependentUpon>frmVendas.cs</DependentUpon>
     </Compile>
+    <Compile Include="padokaBDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>padokaBDDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="padokaBDDataSetInventario.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -175,6 +180,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="padokaBDDataSet.xsc">
+      <DependentUpon>padokaBDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="padokaBDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>padokaBDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="padokaBDDataSet.xss">
+      <DependentUpon>padokaBDDataSet.xsd</DependentUpon>
+    </None>
     <None Include="padokaBDDataSetInventario.xsc">
       <DependentUpon>padokaBDDataSetInventario.xsd</DependentUpon>
     </None>

@@ -5,7 +5,12 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+
 using System.Threading.Tasks;
+using System.Data.OleDb;
+
+using CamadaDeDados;
+using CamadaDeNegocio;
 using System.Windows.Forms;
 
 namespace GestaoEstoque
@@ -15,8 +20,9 @@ namespace GestaoEstoque
         public frmVendas()
         {
             InitializeComponent();
+            
         }
-
+        
         private void btnMenu_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -34,5 +40,13 @@ namespace GestaoEstoque
             else
                 Environment.Exit(0);
         }
+
+        private void frmVendas_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'padokaBDDataSet.Consumo_Prod'. Você pode movê-la ou removê-la conforme necessário.
+            this.consumo_ProdTableAdapter.Fill(this.padokaBDDataSet.Consumo_Prod);
+
+        }
+       
     }
 }

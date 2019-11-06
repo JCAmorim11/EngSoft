@@ -28,13 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVendas));
             this.lblFundo = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMenu = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.dgvVendas = new System.Windows.Forms.DataGridView();
+            this.padokaBDDataSet = new GestaoEstoque.padokaBDDataSet();
+            this.consumoProdBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.consumo_ProdTableAdapter = new GestaoEstoque.padokaBDDataSetTableAdapters.Consumo_ProdTableAdapter();
+            this.iDConsumoProdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDCPFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDProdutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.condProdQuantDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.condProdPrecoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.condProdDataDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVendas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.padokaBDDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consumoProdBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblFundo
@@ -43,32 +53,6 @@
             this.lblFundo.Name = "lblFundo";
             this.lblFundo.Size = new System.Drawing.Size(670, 340);
             this.lblFundo.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(73, 51);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Código do produto";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(521, 272);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Preço";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(486, 42);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(189, 160);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // btnMenu
             // 
@@ -80,6 +64,73 @@
             this.btnMenu.UseVisualStyleBackColor = true;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
+            // dgvVendas
+            // 
+            this.dgvVendas.AutoGenerateColumns = false;
+            this.dgvVendas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVendas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDConsumoProdDataGridViewTextBoxColumn,
+            this.iDCPFDataGridViewTextBoxColumn,
+            this.iDProdutoDataGridViewTextBoxColumn,
+            this.condProdQuantDataGridViewTextBoxColumn,
+            this.condProdPrecoDataGridViewTextBoxColumn,
+            this.condProdDataDataGridViewTextBoxColumn});
+            this.dgvVendas.DataSource = this.consumoProdBindingSource;
+            this.dgvVendas.Location = new System.Drawing.Point(52, 103);
+            this.dgvVendas.Name = "dgvVendas";
+            this.dgvVendas.Size = new System.Drawing.Size(617, 182);
+            this.dgvVendas.TabIndex = 6;
+            // 
+            // padokaBDDataSet
+            // 
+            this.padokaBDDataSet.DataSetName = "padokaBDDataSet";
+            this.padokaBDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // consumoProdBindingSource
+            // 
+            this.consumoProdBindingSource.DataMember = "Consumo_Prod";
+            this.consumoProdBindingSource.DataSource = this.padokaBDDataSet;
+            // 
+            // consumo_ProdTableAdapter
+            // 
+            this.consumo_ProdTableAdapter.ClearBeforeFill = true;
+            // 
+            // iDConsumoProdDataGridViewTextBoxColumn
+            // 
+            this.iDConsumoProdDataGridViewTextBoxColumn.DataPropertyName = "ID_ConsumoProd";
+            this.iDConsumoProdDataGridViewTextBoxColumn.HeaderText = "ID_ConsumoProd";
+            this.iDConsumoProdDataGridViewTextBoxColumn.Name = "iDConsumoProdDataGridViewTextBoxColumn";
+            // 
+            // iDCPFDataGridViewTextBoxColumn
+            // 
+            this.iDCPFDataGridViewTextBoxColumn.DataPropertyName = "ID_CPF";
+            this.iDCPFDataGridViewTextBoxColumn.HeaderText = "ID_CPF";
+            this.iDCPFDataGridViewTextBoxColumn.Name = "iDCPFDataGridViewTextBoxColumn";
+            // 
+            // iDProdutoDataGridViewTextBoxColumn
+            // 
+            this.iDProdutoDataGridViewTextBoxColumn.DataPropertyName = "ID_Produto";
+            this.iDProdutoDataGridViewTextBoxColumn.HeaderText = "ID_Produto";
+            this.iDProdutoDataGridViewTextBoxColumn.Name = "iDProdutoDataGridViewTextBoxColumn";
+            // 
+            // condProdQuantDataGridViewTextBoxColumn
+            // 
+            this.condProdQuantDataGridViewTextBoxColumn.DataPropertyName = "CondProd_Quant";
+            this.condProdQuantDataGridViewTextBoxColumn.HeaderText = "CondProd_Quant";
+            this.condProdQuantDataGridViewTextBoxColumn.Name = "condProdQuantDataGridViewTextBoxColumn";
+            // 
+            // condProdPrecoDataGridViewTextBoxColumn
+            // 
+            this.condProdPrecoDataGridViewTextBoxColumn.DataPropertyName = "CondProd_Preco";
+            this.condProdPrecoDataGridViewTextBoxColumn.HeaderText = "CondProd_Preco";
+            this.condProdPrecoDataGridViewTextBoxColumn.Name = "condProdPrecoDataGridViewTextBoxColumn";
+            // 
+            // condProdDataDataGridViewTextBoxColumn
+            // 
+            this.condProdDataDataGridViewTextBoxColumn.DataPropertyName = "CondProd_Data";
+            this.condProdDataDataGridViewTextBoxColumn.HeaderText = "CondProd_Data";
+            this.condProdDataDataGridViewTextBoxColumn.Name = "condProdDataDataGridViewTextBoxColumn";
+            // 
             // frmVendas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -87,28 +138,35 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(719, 366);
+            this.Controls.Add(this.dgvVendas);
             this.Controls.Add(this.btnMenu);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblFundo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmVendas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vendas";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmVendas_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.frmVendas_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVendas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.padokaBDDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consumoProdBindingSource)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Label lblFundo;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnMenu;
+        private System.Windows.Forms.DataGridView dgvVendas;
+        private padokaBDDataSet padokaBDDataSet;
+        private System.Windows.Forms.BindingSource consumoProdBindingSource;
+        private padokaBDDataSetTableAdapters.Consumo_ProdTableAdapter consumo_ProdTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDConsumoProdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDCPFDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDProdutoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn condProdQuantDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn condProdPrecoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn condProdDataDataGridViewTextBoxColumn;
     }
 }

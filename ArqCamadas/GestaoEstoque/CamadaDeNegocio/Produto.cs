@@ -60,5 +60,9 @@ namespace CamadaDeNegocios
             Conexao AcessoDados = new Conexao();
             return AcessoDados.RetornaDataSet("Select * from Produto");
         }
+        public void pesquisa(string q)
+        {
+            Conexao con = new Conexao();
+        }
     }
 }
